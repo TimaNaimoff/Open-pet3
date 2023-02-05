@@ -26,7 +26,7 @@ public class UserMeal {
 
     @Override
     public String toString() {
-        return "UserMeal{" +
+        return "UserMeal{ " +
                 "localDateTime=" + localDateTime +
                 ", description='" + description + '\'' +
                 ", calories=" + calories +
