@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="true" scanPeriod="30 seconds">
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+    <!-- rest of the configuration file .... -->
+    <jmxConfigurator/>
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>C:\Users\malik\Open-pet3\log\open_pet3.log</file>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%date %-5level %logger{0} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%-5level %logger{0}[%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="edu.tampa.open_pet3" level="DEBUG"/>
+    <root level="INFO">
+        <appender-ref ref="file"/>
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
