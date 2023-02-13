@@ -11,22 +11,23 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class UserMealsUtil {
-    public static void main(String[] args) {
-        List<UserMeal> lister = List.of(
-                new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,10,0),"Завтрак",500),
-                new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,13,0),"Обед",500),
-                new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,20,0),"Ужин",500),
-                new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,10,0),"Завтрак",500),
-                new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,13,0),"Обед",500),
-                new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,20,0),"Ужин",500)
+    public static final List<UserMeal> LISTER = List.of(
+            new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,10,0),"Завтрак",500),
+            new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,13,0),"Обед",500),
+            new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,20,0),"Ужин",500),
+            new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,10,0),"Завтрак",500),
+            new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,13,0),"Обед",500),
+            new UserMeal(LocalDateTime.of(2023, Month.MARCH,30,20,0),"Ужин",500)
 
-        );
-        System.out.println(getFilteredMealsWithExceeded(lister,LocalTime.of(0,7), LocalTime.of(12,0),2000));
-        System.out.println(getFilteredMealsWithLoops(lister,LocalTime.of(0,7), LocalTime.of(12,0),2000));
+    );
+    public static void main(String[] args) {
+
+        System.out.println(getFilteredMealsWithExceeded(LISTER,LocalTime.of(0,7), LocalTime.of(12,0),2000));
+        System.out.println(getFilteredMealsWithLoops(LISTER,LocalTime.of(0,7), LocalTime.of(12,0),2000));
 
     }
 
-    private static List<UserMealWithExceed> getFilteredMealsWithExceeded(List<UserMeal> lister, LocalTime of, LocalTime of1, int i) {
+    public static List<UserMealWithExceed> getFilteredMealsWithExceeded(List<UserMeal> lister, LocalTime of, LocalTime of1, int i) {
         Map<LocalDate, Integer> caloriesSumByDate = lister.stream().collect(Collectors.groupingBy
                 (u -> u.getLocalDateTime().toLocalDate(),Collectors.summingInt(UserMeal::getCalories)));
         return lister.stream().
