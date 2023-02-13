@@ -3,12 +3,12 @@ package edu.tampa.open_pet3.model;
 
 import java.time.LocalDateTime;
 
-public class UserMealWithExceed {
+public class MealTo {
     protected final LocalDateTime localDateTime;
     protected final String description;
     protected final int calories;
     protected boolean exceed;
-    public UserMealWithExceed(LocalDateTime localDateTime,String description,int calories,boolean exceed){
+    public MealTo(LocalDateTime localDateTime, String description, int calories, boolean exceed){
         this.localDateTime=localDateTime;
         this.description=description;
         this.calories=calories;
