@@ -32,7 +32,7 @@ public class UserMealsUtil {
                 (u -> u.getLocalDateTime().toLocalDate(),Collectors.summingInt(UserMeal::getCalories)));
         return lister.stream().
                 filter(e->e.getLocalDateTime().toLocalTime().isAfter(of)&&e.getLocalDateTime().toLocalTime().
-                        isBefore(of1)).map(e->new UserMealWithExceed(e.getLocalDateTime(),e.getDescription(),e.getCalories(),caloriesSumByDate.get(e.getLocalDateTime().toLocalDate())>i)).collect(Collectors.toList());
+                        isBefore(of1)).map(e->new UserMealWithExceed(e.getMealId(),e.getLocalDateTime(),e.getDescription(),e.getCalories(),caloriesSumByDate.get(e.getLocalDateTime().toLocalDate())>i)).collect(Collectors.toList());
 
     }
     private static List<UserMealWithExceed> getFilteredMealsWithLoops(List<UserMeal> lister,LocalTime of,LocalTime of1,int i){

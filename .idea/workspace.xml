@@ -13,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="package-info" />
         <option value="Class" />
       </list>
@@ -45,7 +46,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malik\Open-pet3\src\main\resources\spring" />
+      <recent name="C:\Users\malik\Open-pet3\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SpringMain">
+    <configuration name="SpringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.SpringMain" />
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa.open_pet3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserMealsUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.util.UserMealsUtil" />
       <module name="Open-pet3" />
@@ -61,6 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SpringMain" />
         <item itemvalue="Application.UserMealsUtil" />
       </list>
     </recent_temporary>

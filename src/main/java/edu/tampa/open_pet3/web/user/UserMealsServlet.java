@@ -1,13 +1,13 @@
-package edu.tampa.open_pet3.web;
+package edu.tampa.open_pet3.web.user;
 
 
 import edu.tampa.open_pet3.model.UserMeal;
 import edu.tampa.open_pet3.repositories.InMemoryUserMealRepository;
 import edu.tampa.open_pet3.repositories.UserMealRepository;
-import edu.tampa.open_pet3.util.UserMealService;
 import edu.tampa.open_pet3.util.UserMealsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.List;
 import java.util.Objects;
+
 
 public class UserMealsServlet extends HttpServlet {
     private static final Logger LOG= LoggerFactory.getLogger(UserMealsServlet.class);
@@ -40,7 +41,7 @@ public class UserMealsServlet extends HttpServlet {
                  Integer.parseInt(req.getParameter("calories")));
          LOG.info(userMeal.isNew()?"Create: {}":"Update: {}",userMeal);
          userMealRepository.save(userMeal);
-         resp.sendRedirect("/UserMeal.jsp");
+         resp.sendRedirect("/Open-pet3/userMeals");
     }
 
     @Override
@@ -57,7 +58,7 @@ public class UserMealsServlet extends HttpServlet {
             int id=getId(req);
             LOG.info("Delete: {}",id);
             userMealRepository.delete(id);
-            resp.sendRedirect("/UserMeal.jsp");
+            resp.sendRedirect("/Open-pet3/userMeals");
         }else{
             final UserMeal meal=action.equals("create")?new UserMeal(LocalDateTime.now(),"",1000)
                     :userMealRepository.get(getId(req));

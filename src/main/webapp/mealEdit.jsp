@@ -29,8 +29,8 @@
     <hr>
     <h2>${param.action == 'create' ? 'Create meal' : 'Edit meal'}</h2>
     <jsp:useBean id="meal" type="edu.tampa.open_pet3.model.UserMeal" scope="request"/>
-    <form method="post" action="meals">
-        <input type="hidden" name="id" value="${meal.id}">
+    <form method="post" action="/Open-pet3/userMeals">
+        <input type="hidden" name="id" value="${meal.mealId}">
        <dl>
             <dt>DateTime:</dt>
             <dd><input type="datetime-local" value="${meal.localDateTime}" name="localDateTime" required></dd>

@@ -18,7 +18,7 @@
 <body>
 <section>
     <h3><a href="index.html">Home</a></h3>
-    <h3><a href="mealser?action=create">Add Meal</a></h3>
+    <h3><a href="/Open-pet3/userMeals?action=create">Add Meal</a></h3>
     <hr/>
     <h2>Meals</h2>
     <table border="1" cellpadding="8" cellspacing="0">
@@ -30,7 +30,7 @@
         </tr>
         </thead>
         <c:forEach items="${meals}" var="meal">
-            <jsp:useBean id="meal" type="edu.tampa.open_pet3.model.UserMealWithExceed"/>
+            <jsp:useBean id="meal" scope="page" type="edu.tampa.open_pet3.model.UserMealWithExceed"/>
             <tr class="${meal.exceed ? 'exceed' : 'normal'}">
                 <td>
                         <fmt:parseDate value="${meal.localDateTime}" pattern="y-M-dd'T'H:m" var="parseDate"/>
@@ -38,8 +38,8 @@
                  </td>
                 <td>${meal.description}</td>
                 <td>${meal.calories}</td>
-                <td><a href="meals?action=update&id=${meal.id}">UPDATE</a></td>
-                <td><a href="meals?action=delete&id=${meal.id}">DELETE</a></td>
+                <td><a href="/Open-pet3/userMeals?action=update&id=${meal.mealId}">UPDATE</a></td>
+                <td><a href="/Open-pet3/userMeals?action=delete&id=${meal.mealId}">DELETE</a></td>
             </tr>
         </c:forEach>
     </table>

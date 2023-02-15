@@ -2,8 +2,9 @@ package edu.tampa.open_pet3.model;
 
 import java.time.LocalDateTime;
 
+
 public class UserMeal {
-    protected Integer id;
+    protected Integer mealId;
     protected final LocalDateTime localDateTime;
     protected final String description;
     protected final int calories;
@@ -11,7 +12,7 @@ public class UserMeal {
         this.localDateTime=localDateTime;
         this.description=description;
         this.calories=calories;
-        this.id=id;
+        this.mealId =id;
     }
     public UserMeal(LocalDateTime localDateTime,String description,int calories){
         this.localDateTime=localDateTime;
@@ -19,14 +20,14 @@ public class UserMeal {
         this.calories=calories;
     }
     public boolean isNew(){
-        return id==null;
+        return mealId ==null;
     }
-    public Integer getId() {
-        return id;
+    public Integer getMealId() {
+        return mealId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setMealId(Integer mealId) {
+        this.mealId = mealId;
     }
 
     public LocalDateTime getLocalDateTime() {
@@ -43,9 +44,9 @@ public class UserMeal {
 
     @Override
     public String toString() {
-        return "UserMeal{ " +
-                "id="+id+
-                "localDateTime=" + localDateTime +
+        return "UserMeal{" +
+                "id=" + mealId +
+                ", localDateTime=" + localDateTime +
                 ", description='" + description + '\'' +
                 ", calories=" + calories +
                 '}';

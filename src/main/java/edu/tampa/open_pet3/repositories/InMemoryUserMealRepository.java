@@ -8,28 +8,26 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
 public class InMemoryUserMealRepository implements UserMealRepository{
     private Map<Integer,UserMeal> repository=new ConcurrentHashMap<>();
     private AtomicInteger count=new AtomicInteger(0);
     {
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY,30,10,0),"Завтрак",500));
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY,30,13,0),"Обед",1000));
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY,30,20,0),"Ужин",500));
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY,31,10,0),"Завтрак",1000));
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY,31,13,0),"Обед",500));
+        save(new UserMeal(1,LocalDateTime.of(2015, Month.MAY,30,10,0),"Завтрак",500));
+        save(new UserMeal(2,LocalDateTime.of(2015, Month.MAY,30,13,0),"Обед",1000));
+        save(new UserMeal(3,LocalDateTime.of(2015, Month.MAY,30,20,0),"Ужин",500));
+        save(new UserMeal(4,LocalDateTime.of(2015, Month.MAY,31,10,0),"Завтрак",1000));
+        save(new UserMeal(5,LocalDateTime.of(2015, Month.MAY,31,13,0),"Обед",500));
         save(new UserMeal(LocalDateTime.of(2015, Month.MAY,31,20,0),"Ужин",510));
 
     }
     @Override
     public UserMeal save(UserMeal meal) {
         if(meal.isNew()){
-            meal.setId(count.incrementAndGet());
+            meal.setMealId(count.incrementAndGet());
         }
-        return repository.put(meal.getId(),meal);
+        return repository.put(meal.getMealId(),meal);
     }
 
     @Override

@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/schema/beans/spring-beans.xsd">
+
+<!--       <bean class="edu.tampa.open_pet3.repositories.mock.MockUserRepository" id="mockRepo"/>-->
+       <context:annotation-config/>
+       <context:component-scan base-package="edu.tampa.**.repository"/>
+       <context:component-scan base-package="edu.tampa.**.service"/>
+       <context:component-scan base-package="edu.tampa.**.web"/>
+
+</beans>

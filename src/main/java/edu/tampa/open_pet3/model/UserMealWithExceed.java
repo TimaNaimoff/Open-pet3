@@ -4,13 +4,13 @@ package edu.tampa.open_pet3.model;
 import java.time.LocalDateTime;
 
 public class UserMealWithExceed {
-    protected Integer id;
+    protected Integer mealId;
     protected final LocalDateTime localDateTime;
     protected final String description;
     protected final int calories;
     protected boolean exceed;
     public UserMealWithExceed(Integer id,LocalDateTime localDateTime,String description,int calories,boolean exceed){
-        this.id=id;
+        this.mealId =id;
         this.localDateTime=localDateTime;
         this.description=description;
         this.calories=calories;
@@ -22,12 +22,12 @@ public class UserMealWithExceed {
         this.calories=calories;
         this.exceed=exceed;
     }
-    public Integer getId() {
-        return id;
+    public Integer getMealId() {
+        return mealId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setMealId(Integer mealId) {
+        this.mealId = mealId;
     }
 
     public LocalDateTime getLocalDateTime() {
@@ -52,7 +52,8 @@ public class UserMealWithExceed {
     @Override
     public String toString() {
         return "UserMealWithExceed{" +
-                "localDateTime=" + localDateTime +
+                "id=" + mealId +
+                ", localDateTime=" + localDateTime +
                 ", description='" + description + '\'' +
                 ", calories=" + calories +
                 ", exceed=" + exceed +
