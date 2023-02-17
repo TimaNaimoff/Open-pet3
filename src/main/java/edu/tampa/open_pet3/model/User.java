@@ -13,12 +13,18 @@ public class User extends NamedEntity{
     private Set<Role> authorities;
     public User(){}
 
-    public User(String name,String email,String password,boolean enabled,Date date,Role role,Role...roles){
-        super(name);
+    public User(Integer id,String name,String email,String password,boolean enabled,Date date,Role role,Role...roles){
+        super(id,name);
         this.email=email;
         this.password=password;
         this.enabled=enabled;
         this.date=date;
+        this.authorities= EnumSet.of(role,roles);
+    }
+    public User(Integer id,String name,String email,String password,Role role,Role...roles) {
+        super(id, name);
+        this.email = email;
+        this.password = password;
         authorities= EnumSet.of(role,roles);
     }
     public String getEmail() {
@@ -60,7 +66,9 @@ public class User extends NamedEntity{
     public void setAuthorities(Set<Role> authorities) {
         this.authorities = authorities;
     }
-
+    public boolean isNew(){
+        return id==null;
+    }
     @Override
     public String toString() {
         return "User{" +

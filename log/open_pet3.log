@@ -707,3 +707,107 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.vie
 2023-02-17 09:07:47,192 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
 2023-02-17 09:08:15,325 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@418e7838: startup date [Fri Feb 17 09:08:15 UZT 2023]; root of context hierarchy
 2023-02-17 09:08:15,434 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 09:10:14,315 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39665347: startup date [Fri Feb 17 09:10:14 UZT 2023]; root of context hierarchy
+2023-02-17 09:10:14,424 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 09:10:29,493 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@317a4823: startup date [Fri Feb 17 09:10:29 UZT 2023]; root of context hierarchy
+2023-02-17 09:10:29,496 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 09:11:58,830 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@58a283ed: startup date [Fri Feb 17 09:11:58 UZT 2023]; root of context hierarchy
+2023-02-17 09:11:58,924 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 09:12:17,221 INFO  UserMealsServlet [UserMealsServlet.java:55] getAll
+2023-02-17 09:12:24,735 INFO  UserMealsServlet [UserMealsServlet.java:63] Delete: 2
+2023-02-17 09:12:24,805 INFO  UserMealsServlet [UserMealsServlet.java:55] getAll
+2023-02-17 19:58:50,069 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@50b472aa: startup date [Fri Feb 17 19:58:49 UZT 2023]; root of context hierarchy
+2023-02-17 19:58:50,345 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 19:58:51,312 WARN  XmlBeanDefinitionReader [SimpleSaxErrorHandler.java:48] Ignored XML validation warning
+org.xml.sax.SAXParseException: schema_reference.4: Failed to read schema document 'http://www.springframework.org/schema/schema/beans/spring-beans.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:100) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:392) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:306) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4258) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaWarning(XSDHandler.java:4249) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2543) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2239) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:589) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:618) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.findSchemaGrammar(XMLSchemaValidator.java:2711) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2070) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:830) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:374) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:613) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3079) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:836) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342) ~[na:na]
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:127) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:93) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at edu.tampa.open_pet3.SpringMain.main(SpringMain.java:21) ~[classes/:na]
+Caused by: java.net.UnknownHostException: www.springframework.org
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:564) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:583) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:677) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaParsingConfig.parse(SchemaParsingConfig.java:593) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaParsingConfig.parse(SchemaParsingConfig.java:696) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOMParser.parse(SchemaDOMParser.java:530) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2227) ~[na:na]
+	... 34 common frames omitted
+2023-02-17 20:03:50,768 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:03:50 UZT 2023]; root of context hierarchy
+2023-02-17 20:03:51,012 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 20:03:54,359 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:03:50 UZT 2023]; root of context hierarchy
+2023-02-17 20:06:47,184 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:06:47 UZT 2023]; root of context hierarchy
+2023-02-17 20:06:47,279 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 20:06:49,146 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:06:47 UZT 2023]; root of context hierarchy
+2023-02-17 20:07:30,531 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3f197a46: startup date [Fri Feb 17 20:07:30 UZT 2023]; root of context hierarchy
+2023-02-17 20:07:30,706 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 20:07:32,583 INFO  UserMealsRestController [UserMealsRestController.java:66] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 0
+2023-02-17 20:07:32,583 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@3f197a46: startup date [Fri Feb 17 20:07:30 UZT 2023]; root of context hierarchy
+2023-02-17 20:09:46,314 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:09:46 UZT 2023]; root of context hierarchy
+2023-02-17 20:09:46,435 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 20:09:48,524 INFO  UserMealsRestController [UserMealsRestController.java:66] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 1
+2023-02-17 20:09:48,527 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:09:46 UZT 2023]; root of context hierarchy
+2023-02-17 20:11:49,887 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:11:49 UZT 2023]; root of context hierarchy
+2023-02-17 20:11:50,043 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 20:11:51,669 INFO  UserMealsRestController [UserMealsRestController.java:66] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 0
+2023-02-17 20:11:51,669 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:11:49 UZT 2023]; root of context hierarchy
+2023-02-17 20:14:18,294 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3f197a46: startup date [Fri Feb 17 20:14:18 UZT 2023]; root of context hierarchy
+2023-02-17 20:14:18,394 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 20:14:20,136 INFO  UserMealsRestController [UserMealsRestController.java:66] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 1
+2023-02-17 20:14:20,141 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@3f197a46: startup date [Fri Feb 17 20:14:18 UZT 2023]; root of context hierarchy
+2023-02-17 20:14:31,468 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:14:31 UZT 2023]; root of context hierarchy
+2023-02-17 20:14:31,566 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-17 20:14:34,369 INFO  UserMealsRestController [UserMealsRestController.java:66] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 2
+2023-02-17 20:14:34,409 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:14:31 UZT 2023]; root of context hierarchy

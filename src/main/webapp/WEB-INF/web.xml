@@ -14,7 +14,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>userMeal</servlet-name>
-        <servlet-class>edu.tampa.open_pet3.web.user.UserMealsServlet</servlet-class>
+        <servlet-class>edu.tampa.open_pet3.web.meal.UserMealsServlet</servlet-class>
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>

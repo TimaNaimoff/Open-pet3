@@ -1,4 +1,4 @@
-package edu.tampa.open_pet3.model;
+package edu.tampa.open_pet3.to;
 
 
 import java.time.LocalDateTime;

@@ -1,7 +1,7 @@
 package edu.tampa.open_pet3.util;
 
 import edu.tampa.open_pet3.model.UserMeal;
-import edu.tampa.open_pet3.model.UserMealWithExceed;
+import edu.tampa.open_pet3.to.UserMealWithExceed;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
