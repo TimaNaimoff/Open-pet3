@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -71,7 +71,7 @@
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.tampa.open_pet3.util.*" />
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

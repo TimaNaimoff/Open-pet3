@@ -1,6 +1,7 @@
 package edu.tampa.open_pet3.repositories;
 
 import edu.tampa.open_pet3.model.UserMeal;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -10,6 +11,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Repository("inMemoryUserMealRepository")
 public class InMemoryUserMealRepository implements UserMealRepository{
     private Map<Integer,UserMeal> repository=new ConcurrentHashMap<>();
     private AtomicInteger count=new AtomicInteger(0);

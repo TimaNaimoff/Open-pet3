@@ -8,9 +8,9 @@ import java.util.Arrays;
 
 public class SpringMain {
     public static void main(String[] args) {
-        ConfigurableApplicationContext config = new ClassPathXmlApplicationContext("spring/spring-app.xml ");
+        ConfigurableApplicationContext config = new ClassPathXmlApplicationContext("spring/spring-app.xml");
         System.out.println(config.getBean(MockUserRepository.class));
-        System.out.println(Arrays.toString(config.getBeanDefinitionNames()));
-        config.close();
+//        System.out.println(Arrays.toString(config.getBeanDefinitionNames()));
+//        config.close();
     }
 }

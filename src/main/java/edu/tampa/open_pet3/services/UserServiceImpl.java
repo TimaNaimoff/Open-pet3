@@ -3,6 +3,7 @@ package edu.tampa.open_pet3.services;
 import edu.tampa.open_pet3.model.User;
 import edu.tampa.open_pet3.repositories.UserRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,10 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService{
     private UserRepository userRepository;
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository){
+        this.userRepository=userRepository;
+    }
     @Override
     public User save(User user) {
         return null;
@@ -39,5 +44,13 @@ public class UserServiceImpl implements UserService{
     @Override
     public void update(User user) throws NotFoundException {
 
+    }
+
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
+
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 }

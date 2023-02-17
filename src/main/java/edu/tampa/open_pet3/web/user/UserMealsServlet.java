@@ -2,12 +2,15 @@ package edu.tampa.open_pet3.web.user;
 
 
 import edu.tampa.open_pet3.model.UserMeal;
-import edu.tampa.open_pet3.repositories.InMemoryUserMealRepository;
-import edu.tampa.open_pet3.repositories.UserMealRepository;
+import edu.tampa.open_pet3.repositories.mock.MockUserRepository;
+import edu.tampa.open_pet3.services.UserMealServiceImpl;
 import edu.tampa.open_pet3.util.UserMealsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.access.el.SpringBeanELResolver;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -23,11 +26,12 @@ import java.util.Objects;
 
 public class UserMealsServlet extends HttpServlet {
     private static final Logger LOG= LoggerFactory.getLogger(UserMealsServlet.class);
-    private UserMealRepository userMealRepository;
+    private  UserMealServiceImpl userMealServiceImpl;
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         super.init(servletConfig);
-        userMealRepository=new InMemoryUserMealRepository();
+        ConfigurableApplicationContext config = new ClassPathXmlApplicationContext("spring/spring-app.xml ");
+        userMealServiceImpl=config.getBean(UserMealServiceImpl.class);
     }
 
 
@@ -40,7 +44,7 @@ public class UserMealsServlet extends HttpServlet {
                  req.getParameter("description"),
                  Integer.parseInt(req.getParameter("calories")));
          LOG.info(userMeal.isNew()?"Create: {}":"Update: {}",userMeal);
-         userMealRepository.save(userMeal);
+         userMealServiceImpl.save(userMeal);
          resp.sendRedirect("/Open-pet3/userMeals");
     }
 
@@ -50,18 +54,18 @@ public class UserMealsServlet extends HttpServlet {
         if(action==null){
             LOG.info("getAll");
             req.setAttribute("meals",UserMealsUtil.getFilteredMealsWithExceeded(
-                    (List<UserMeal>)userMealRepository.getAll(),LocalDateTime.of(2015, Month.MAY,30,10,0).toLocalTime(),
+                    (List<UserMeal>)userMealServiceImpl.index(),LocalDateTime.of(2015, Month.MAY,30,10,0).toLocalTime(),
                     LocalDateTime.of(2015, Month.MAY,31,20,0).toLocalTime(),2000));
             req.getRequestDispatcher("/UserMeal.jsp").forward(req,resp);
         }
         else if(action.equals("delete")){
             int id=getId(req);
             LOG.info("Delete: {}",id);
-            userMealRepository.delete(id);
+            userMealServiceImpl.delete(id);
             resp.sendRedirect("/Open-pet3/userMeals");
         }else{
             final UserMeal meal=action.equals("create")?new UserMeal(LocalDateTime.now(),"",1000)
-                    :userMealRepository.get(getId(req));
+                    :userMealServiceImpl.get(getId(req));
             req.setAttribute("meal",meal);
             req.getRequestDispatcher("/mealEdit.jsp").forward(req,resp);
         }
