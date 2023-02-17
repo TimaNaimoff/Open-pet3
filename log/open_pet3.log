@@ -9,6 +9,7 @@
 2023-02-09 20:03:32,572 DEBUG UserServlet [UserServlet.java:18] Redirect to userList
 2023-02-09 20:04:17,213 INFO  UserMealsServlet [UserMealsServlet.java:17] redirect started!
 2023-02-09 20:04:33,001 INFO  UserMealsServlet [UserMealsServlet.java:17] redirect started!
+<<<<<<< HEAD
 2023-02-13 10:06:03,741 INFO  UserMealsServlet [UserMealsServlet.java:17] redirect started!
 2023-02-13 10:06:03,764 INFO  UserMealsServlet [UserMealsServlet.java:17] redirect started!
 2023-02-13 10:06:16,186 INFO  UserMealsServlet [UserMealsServlet.java:17] redirect started!
@@ -811,3 +812,16 @@ Caused by: java.net.UnknownHostException: www.springframework.org
 2023-02-17 20:14:31,566 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
 2023-02-17 20:14:34,369 INFO  UserMealsRestController [UserMealsRestController.java:66] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 2
 2023-02-17 20:14:34,409 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Fri Feb 17 20:14:31 UZT 2023]; root of context hierarchy
+=======
+2023-02-10 09:36:40,616 DEBUG UserServlet [UserServlet.java:20] Redirect to userList
+2023-02-10 09:45:28,625 DEBUG UserServlet [UserServlet.java:19] Redirect to userList
+2023-02-10 09:46:02,728 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 09:51:25,576 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 10:01:09,942 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 10:01:32,396 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 10:01:37,908 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 10:03:08,865 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 10:05:00,134 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 10:25:07,627 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+2023-02-10 10:32:01,385 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
+>>>>>>> main
