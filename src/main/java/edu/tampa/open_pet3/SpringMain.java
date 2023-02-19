@@ -15,7 +15,7 @@ import java.util.List;
 
 public class SpringMain {
     public static void main(String[] args) {
-        try (ConfigurableApplicationContext config = new ClassPathXmlApplicationContext("spring/spring-app.xml");
+        try (ConfigurableApplicationContext config = new ClassPathXmlApplicationContext("java/edu/tampa_open_pet3/spring/spring-app.xml");
         ) {
             System.out.println(Arrays.toString(config.getBeanDefinitionNames()));
             UserAdminRestController adminius=config.getBean(UserAdminRestController.class);

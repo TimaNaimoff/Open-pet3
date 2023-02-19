@@ -3,17 +3,16 @@ package edu.tampa.open_pet3.to;
 
 import java.time.LocalDateTime;
 
-<<<<<<<< HEAD:src/main/java/edu/tampa/open_pet3/to/UserMealWithExceed.java
+//<<<<<<<< HEAD:src/main/java/edu/tampa/open_pet3/to/UserMealWithExceed.java
 public class UserMealWithExceed {
     protected Integer mealId;
-========
-public class MealTo {
->>>>>>>> main:src/main/java/edu/tampa/open_pet3/model/MealTo.java
+//========
+//>>>>>>>> main:src/main/java/edu/tampa/open_pet3/model/MealTo.java
     protected final LocalDateTime localDateTime;
     protected final String description;
     protected final int calories;
     protected boolean exceed;
-<<<<<<<< HEAD:src/main/java/edu/tampa/open_pet3/to/UserMealWithExceed.java
+//<<<<<<<< HEAD:src/main/java/edu/tampa/open_pet3/to/UserMealWithExceed.java
     public UserMealWithExceed(Integer id,LocalDateTime localDateTime,String description,int calories,boolean exceed){
         this.mealId =id;
         this.localDateTime=localDateTime;
@@ -21,15 +20,7 @@ public class MealTo {
         this.calories=calories;
         this.exceed=exceed;
     }
-    public UserMealWithExceed(LocalDateTime localDateTime,String description,int calories,boolean exceed){
-========
-    public MealTo(LocalDateTime localDateTime, String description, int calories, boolean exceed){
->>>>>>>> main:src/main/java/edu/tampa/open_pet3/model/MealTo.java
-        this.localDateTime=localDateTime;
-        this.description=description;
-        this.calories=calories;
-        this.exceed=exceed;
-    }
+//    public UserMealWithExceed(LocalDateTime localDateTime,String description,int calories,boolean exceed){
     public Integer getMealId() {
         return mealId;
     }

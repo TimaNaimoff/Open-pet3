@@ -1,8 +1,9 @@
-package edu.tampa.open_pet3.repositories.mock;
+package edu.tampa_open_pet3.repo.mock;
 
 import edu.tampa.open_pet3.model.Role;
 import edu.tampa.open_pet3.model.User;
 import edu.tampa.open_pet3.repositories.UserRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,7 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Repository("inMemoryUserRepository")
 public class InMemoryUserRepository implements UserRepository {
     private Map<Integer,User> repository=new ConcurrentHashMap<>();
     private AtomicInteger counter=new AtomicInteger();

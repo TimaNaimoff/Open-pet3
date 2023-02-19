@@ -1,6 +1,5 @@
 package edu.tampa.open_pet3.web.user;
 
-import edu.tampa.open_pet3.util.MealsUtil;
 import org.slf4j.Logger;
 
 import javax.servlet.ServletException;

@@ -1,16 +1,26 @@
-package edu.tampa.open_pet3.repositories.mock;
+package edu.tampa.open_pet3.repositories;
 
 import edu.tampa.open_pet3.model.User;
-import edu.tampa.open_pet3.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.List;
 
 @Repository
 public class MockUserRepository implements UserRepository {
     private static final Logger LOG= LoggerFactory.getLogger(MockUserRepository.class);
+    @PostConstruct
+    public void postConstruct(){
+        LOG.info("POST CONSTRUCT");
+    }
+    @PreDestroy
+    public void preDestroy(){
+        LOG.info("PRE DESTROY");
+    }
+
     @Override
     public User save(User user) {
         LOG.info("Save: "+user);
@@ -20,7 +30,7 @@ public class MockUserRepository implements UserRepository {
     @Override
     public boolean delete(int id) {
         LOG.info("Delete: "+id);
-        return false;
+        return id!=0;
     }
 
     @Override

@@ -8,9 +8,17 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserAdminRestController {
-    @Autowired
+
     private UserService userService;
-    public  User getAdminus(int id, String userName, String email,String password,Role role){
+    @Autowired
+    public UserAdminRestController(UserService userService){
+        this.userService=userService;
+    }
+    public  User getAdminus(Integer id, String userName, String email,String password,Role role){
         return new User(id,userName,email,password,role);
     }
+    public void delete(int userId){
+        userService.delete(userId);
+    }
+
 }

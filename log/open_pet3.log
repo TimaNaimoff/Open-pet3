@@ -825,3 +825,382 @@ Caused by: java.net.UnknownHostException: www.springframework.org
 2023-02-10 10:25:07,627 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
 2023-02-10 10:32:01,385 INFO  UserMealsServlet [UserMealsServlet.java:19] redirect started!
 >>>>>>> main
+2023-02-18 09:51:18,689 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@50b472aa: startup date [Sat Feb 18 09:51:18 UZT 2023]; root of context hierarchy
+2023-02-18 09:51:18,901 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-18 09:51:22,443 INFO  UserMealsRestController [UserMealsRestController.java:66] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 2
+2023-02-18 09:51:22,477 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@50b472aa: startup date [Sat Feb 18 09:51:18 UZT 2023]; root of context hierarchy
+2023-02-18 10:10:32,436 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@9353778: startup date [Sat Feb 18 10:10:32 UZT 2023]; root of context hierarchy
+2023-02-18 10:10:32,551 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-18 10:10:34,642 INFO  UserMealsRestController [UserMealsRestController.java:69] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 2
+2023-02-18 10:10:34,652 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@9353778: startup date [Sat Feb 18 10:10:32 UZT 2023]; root of context hierarchy
+2023-02-18 10:24:19,124 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@68b734a8: startup date [Sat Feb 18 10:24:19 UZT 2023]; root of context hierarchy
+2023-02-18 10:24:19,267 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-18 10:25:46,628 INFO  UserMealsServlet [UserMealsServlet.java:55] getAll
+2023-02-18 10:25:56,113 INFO  UserMealsServlet [UserMealsServlet.java:63] Delete: 5
+2023-02-18 10:25:56,124 INFO  UserMealsServlet [UserMealsServlet.java:55] getAll
+2023-02-18 14:28:55,932 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Sat Feb 18 14:28:55 UZT 2023]; root of context hierarchy
+2023-02-18 14:28:56,234 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-18 14:29:01,206 INFO  UserMealsRestController [UserMealsRestController.java:69] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 2
+2023-02-18 14:29:01,308 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@636be97c: startup date [Sat Feb 18 14:28:55 UZT 2023]; root of context hierarchy
+2023-02-18 14:33:05,407 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1817d444: startup date [Sat Feb 18 14:33:05 UZT 2023]; root of context hierarchy
+2023-02-18 14:33:05,479 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-18 14:33:08,133 INFO  MockUserRepository [MockUserRepository.java:18] POST CONSTRUCT
+2023-02-18 14:33:08,249 INFO  UserMealsRestController [UserMealsRestController.java:69] getBetween dates 2015-05-30 - 07:00 for time 2015-05-31 - 11:00 for User 2
+2023-02-18 14:33:08,262 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@1817d444: startup date [Sat Feb 18 14:33:05 UZT 2023]; root of context hierarchy
+2023-02-18 14:33:08,263 INFO  MockUserRepository [MockUserRepository.java:22] PRE DESTROY
+2023-02-19 14:57:37,167 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@411f53a0: startup date [Sun Feb 19 14:57:37 UZT 2023]; root of context hierarchy
+2023-02-19 14:57:37,283 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 14:57:40,661 WARN  ClassPathXmlApplicationContext [AbstractApplicationContext.java:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\malik\Open-pet3\target\classes\edu\tampa\open_pet3\services\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [edu.tampa.open_pet3.repositories.UserRepository]: : No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1131) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1034) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at edu.tampa_open_pet3.web.mock.UserAdminMockTest.beforeClass(UserAdminMockTest.java:21) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) ~[junit-4.11.jar:na]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) ~[junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:813) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 30 common frames omitted
+2023-02-19 15:04:13,899 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2d3379b4: startup date [Sun Feb 19 15:04:13 UZT 2023]; root of context hierarchy
+2023-02-19 15:04:13,968 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 15:04:15,662 WARN  ClassPathXmlApplicationContext [AbstractApplicationContext.java:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\malik\Open-pet3\target\classes\edu\tampa\open_pet3\services\UserServiceImpl.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [edu.tampa.open_pet3.repositories.UserRepository]: : No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1131) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1034) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at edu.tampa_open_pet3.web.mock.UserAdminMockTest.beforeClass(UserAdminMockTest.java:21) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) ~[junit-4.11.jar:na]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) ~[junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:813) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 30 common frames omitted
+2023-02-19 15:07:08,919 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@51399530: startup date [Sun Feb 19 15:07:08 UZT 2023]; root of context hierarchy
+2023-02-19 15:07:08,995 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 15:07:10,449 WARN  ClassPathXmlApplicationContext [AbstractApplicationContext.java:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private edu.tampa.open_pet3.repositories.UserRepository edu.tampa.open_pet3.services.UserServiceImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("inMemoryUserRepository"), @org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1202) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at edu.tampa_open_pet3.web.mock.UserAdminMockTest.beforeClass(UserAdminMockTest.java:21) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) ~[junit-4.11.jar:na]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) ~[junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private edu.tampa.open_pet3.repositories.UserRepository edu.tampa.open_pet3.services.UserServiceImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("inMemoryUserRepository"), @org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 28 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [edu.tampa.open_pet3.repositories.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("inMemoryUserRepository"), @org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1308) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:949) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 30 common frames omitted
+2023-02-19 15:17:01,717 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7c7a06ec: startup date [Sun Feb 19 15:17:01 UZT 2023]; root of context hierarchy
+2023-02-19 15:17:01,789 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 15:17:04,049 INFO  MockUserRepository [MockUserRepository.java:17] POST CONSTRUCT
+2023-02-19 15:17:04,079 WARN  ClassPathXmlApplicationContext [AbstractApplicationContext.java:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [C:\Users\malik\Open-pet3\target\classes\edu\tampa\open_pet3\services\UserServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [edu.tampa.open_pet3.services.UserServiceImpl]: No default constructor found; nested exception is java.lang.NoSuchMethodException: edu.tampa.open_pet3.services.UserServiceImpl.<init>()
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1093) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1038) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:762) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83) ~[spring-context-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at edu.tampa_open_pet3.web.mock.UserAdminMockTest.beforeClass(UserAdminMockTest.java:21) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.11.jar:na]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) ~[junit-4.11.jar:na]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) ~[junit-4.11.jar:na]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) ~[junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [edu.tampa.open_pet3.services.UserServiceImpl]: No default constructor found; nested exception is java.lang.NoSuchMethodException: edu.tampa.open_pet3.services.UserServiceImpl.<init>()
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:85) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1086) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 28 common frames omitted
+Caused by: java.lang.NoSuchMethodException: edu.tampa.open_pet3.services.UserServiceImpl.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3617) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2786) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:80) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 29 common frames omitted
+2023-02-19 15:17:04,081 INFO  MockUserRepository [MockUserRepository.java:21] PRE DESTROY
+2023-02-19 15:18:00,764 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6b2ea799: startup date [Sun Feb 19 15:18:00 UZT 2023]; root of context hierarchy
+2023-02-19 15:18:00,931 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 15:18:02,691 INFO  MockUserRepository [MockUserRepository.java:17] POST CONSTRUCT
+2023-02-19 15:18:02,771 INFO  MockUserRepository [MockUserRepository.java:32] Delete: 0
+2023-02-19 15:18:02,788 INFO  MockUserRepository [MockUserRepository.java:32] Delete: 1
+2023-02-19 15:18:02,790 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@6b2ea799: startup date [Sun Feb 19 15:18:00 UZT 2023]; root of context hierarchy
+2023-02-19 15:18:02,791 INFO  MockUserRepository [MockUserRepository.java:21] PRE DESTROY
+2023-02-19 15:22:05,234 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b71e916: startup date [Sun Feb 19 15:22:05 UZT 2023]; root of context hierarchy
+2023-02-19 15:22:05,330 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 15:22:07,360 INFO  MockUserRepository [MockUserRepository.java:17] POST CONSTRUCT
+2023-02-19 15:22:07,447 INFO  MockUserRepository [MockUserRepository.java:32] Delete: 0
+2023-02-19 15:22:07,456 INFO  MockUserRepository [MockUserRepository.java:32] Delete: 1
+2023-02-19 15:22:07,457 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@2b71e916: startup date [Sun Feb 19 15:22:05 UZT 2023]; root of context hierarchy
+2023-02-19 15:22:07,459 INFO  MockUserRepository [MockUserRepository.java:21] PRE DESTROY
+2023-02-19 15:23:37,189 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2d3379b4: startup date [Sun Feb 19 15:23:37 UZT 2023]; root of context hierarchy
+2023-02-19 15:23:37,327 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 15:23:38,903 INFO  MockUserRepository [MockUserRepository.java:17] POST CONSTRUCT
+2023-02-19 15:23:39,002 INFO  MockUserRepository [MockUserRepository.java:32] Delete: 0
+2023-02-19 15:23:39,033 INFO  ClassPathXmlApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.ClassPathXmlApplicationContext@2d3379b4: startup date [Sun Feb 19 15:23:37 UZT 2023]; root of context hierarchy
+2023-02-19 15:23:39,035 INFO  MockUserRepository [MockUserRepository.java:21] PRE DESTROY
+2023-02-19 18:40:32,733 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2023-02-19 18:40:32,781 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/web/context/request/RequestAttributes]
+2023-02-19 18:40:32,782 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:204] Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-02-19 18:40:32,789 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:204] Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-02-19 18:40:32,797 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@a1cdc6d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@175b9425]
+2023-02-19 18:40:33,699 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring.xml]
+2023-02-19 18:40:33,731 ERROR TestContextManager [TestContextManager.java:215] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@a1cdc6d] to prepare test instance [edu.tampa_open_pet3.web.mock.UserAdminSpringMockTest@18271936]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:254) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:217) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) ~[junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/spring.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/spring.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:253) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:122) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 26 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [spring/spring.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172) ~[spring-core-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 38 common frames omitted
+2023-02-19 18:40:33,872 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring.xml]
+2023-02-19 18:40:33,878 ERROR TestContextManager [TestContextManager.java:215] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@a1cdc6d] to prepare test instance [edu.tampa_open_pet3.web.mock.UserAdminSpringMockTest@70ed52de]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:254) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:217) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) ~[junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/spring.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/spring.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:253) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:122) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 26 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [spring/spring.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172) ~[spring-core-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 38 common frames omitted
+2023-02-19 18:40:33,897 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring.xml]
+2023-02-19 18:40:33,901 ERROR TestContextManager [TestContextManager.java:215] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@a1cdc6d] to prepare test instance [edu.tampa_open_pet3.web.mock.UserAdminSpringMockTest@1033576a]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:254) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:217) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) ~[junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) ~[junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) ~[junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/spring.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/spring.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:253) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:122) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86) ~[spring-test-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 26 common frames omitted
+Caused by: java.io.FileNotFoundException: class path resource [spring/spring.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172) ~[spring-core-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330) ~[spring-beans-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	... 38 common frames omitted
+2023-02-19 18:41:28,864 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:256] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2023-02-19 18:41:28,881 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:204] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/web/context/request/RequestAttributes]
+2023-02-19 18:41:28,885 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:204] Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-02-19 18:41:28,888 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:204] Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-02-19 18:41:28,913 INFO  DefaultTestContextBootstrapper [AbstractTestContextBootstrapper.java:182] Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@17a7f733, org.springframework.test.context.support.DirtiesContextTestExecutionListener@68567e20]
+2023-02-19 18:41:29,213 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [spring/spring-app.xml]
+2023-02-19 18:41:32,438 INFO  GenericApplicationContext [AbstractApplicationContext.java:510] Refreshing org.springframework.context.support.GenericApplicationContext@74455848: startup date [Sun Feb 19 18:41:32 UZT 2023]; root of context hierarchy
+2023-02-19 18:41:32,643 INFO  MockUserRepository [MockUserRepository.java:17] POST CONSTRUCT
+2023-02-19 18:41:32,765 INFO  MockUserRepository [MockUserRepository.java:32] Delete: 0
+2023-02-19 18:41:32,798 INFO  MockUserRepository [MockUserRepository.java:32] Delete: 1
+2023-02-19 18:41:32,809 INFO  GenericApplicationContext [AbstractApplicationContext.java:862] Closing org.springframework.context.support.GenericApplicationContext@74455848: startup date [Sun Feb 19 18:41:32 UZT 2023]; root of context hierarchy
+2023-02-19 18:41:32,810 INFO  MockUserRepository [MockUserRepository.java:21] PRE DESTROY

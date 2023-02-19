@@ -35,6 +35,9 @@ public class UserMealsRestController {
         LOG.info("delete meal {} for User {}",id,userId);
         userMealService.delete(id,userId);
     }
+    public List<UserMeal>getAllik(int id){
+        return userMealService.index(id);
+    }
     public List<UserMealWithExceed> getAll(){
 
         int userId = LoggedUser.id();

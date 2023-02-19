@@ -10,8 +10,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-import static edu.tampa.open_pet3.repositories.mock.InMemoryUserRepository.ADMIN_ID;
-import static edu.tampa.open_pet3.repositories.mock.InMemoryUserRepository.USER_ID;
 
 @Repository("inMemoryUserMealRepository")
 public class InMemoryUserMealRepository implements UserMealRepository{
@@ -19,12 +17,12 @@ public class InMemoryUserMealRepository implements UserMealRepository{
     private AtomicInteger count=new AtomicInteger(0);
     public static final Comparator<UserMeal>USER_MEAL_COMPARATOR=((um,um2)->um2.getLocalDateTime().compareTo(um.getLocalDateTime()));
     {
-        save(new UserMeal(1,LocalDateTime.of(2015, Month.MAY,30,10,0),"Завтрак",500),USER_ID);
-        save(new UserMeal(2,LocalDateTime.of(2015, Month.MAY,30,13,0),"Обед",1000),USER_ID);
-        save(new UserMeal(3,LocalDateTime.of(2015, Month.MAY,30,20,0),"Ужин",500),USER_ID);
-        save(new UserMeal(4,LocalDateTime.of(2015, Month.MAY,31,10,0),"Завтрак",1000),USER_ID);
-        save(new UserMeal(5,LocalDateTime.of(2015, Month.MAY,31,13,0),"Обед админа",500),ADMIN_ID);
-        save(new UserMeal(LocalDateTime.of(2015, Month.MAY,31,20,0),"Ужин админа",510),ADMIN_ID);
+        save(new UserMeal(1,LocalDateTime.of(2015, Month.MAY,30,10,0),"Завтрак",500),1);
+        save(new UserMeal(2,LocalDateTime.of(2015, Month.MAY,30,13,0),"Обед",1000),1);
+        save(new UserMeal(3,LocalDateTime.of(2015, Month.MAY,30,20,0),"Ужин",500),1);
+        save(new UserMeal(4,LocalDateTime.of(2015, Month.MAY,31,10,0),"Завтрак",1000),2);
+        save(new UserMeal(5,LocalDateTime.of(2015, Month.MAY,31,13,0),"Обед админа",500),2);
+        save(new UserMeal(LocalDateTime.of(2015, Month.MAY,31,20,0),"Ужин админа",510),2);
 
     }
     @Override

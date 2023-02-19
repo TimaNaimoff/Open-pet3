@@ -56,41 +56,98 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\malik\Open-pet3\src\main\resources\spring" />
       <recent name="C:\Users\malik\Open-pet3\src\main\resources" />
+      <recent name="C:\Users\malik\Open-pet3\src\test\java\edu\tampa_open_pet3" />
+      <recent name="C:\Users\malik\Open-pet3\src" />
+      <recent name="C:\Users\malik\Open-pet3\src\main\resources\spring" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.tampa.open_pet3.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringMain">
-    <configuration name="SpringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.SpringMain" />
+  <component name="RunManager" selected="JUnit.UserAdminSpringMockTest">
+    <configuration name="UserAdminMockTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.tampa.open_pet3.*" />
+          <option name="PATTERN" value="java.edu.tampa.open_pet3.repo.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="java.edu.tampa.open_pet3.repo.web" />
+      <option name="MAIN_CLASS_NAME" value="java.edu.tampa.open_pet3.repo.web.UserAdminMockTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMealsUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.util.UserMealsUtil" />
+    <configuration name="UserAdminMockTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
+          <option name="PATTERN" value="java.edu.tampa.open_pet3.web.mock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="java.edu.tampa.open_pet3.web.mock" />
+      <option name="MAIN_CLASS_NAME" value="java.edu.tampa.open_pet3.web.mock.UserAdminMockTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserAdminMockTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java.edu.tampa_open_pet3.web.mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="java.edu.tampa_open_pet3.web.mock" />
+      <option name="MAIN_CLASS_NAME" value="java.edu.tampa_open_pet3.web.mock.UserAdminMockTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserAdminMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa_open_pet3.web.mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tampa_open_pet3.web.mock" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa_open_pet3.web.mock.UserAdminMockTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserAdminSpringMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa_open_pet3.web.mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tampa_open_pet3.web.mock" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa_open_pet3.web.mock.UserAdminSpringMockTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringMain" />
-        <item itemvalue="Application.UserMealsUtil" />
+        <item itemvalue="JUnit.UserAdminSpringMockTest" />
+        <item itemvalue="JUnit.UserAdminMockTest" />
+        <item itemvalue="JUnit.UserAdminMockTest (3)" />
+        <item itemvalue="JUnit.UserAdminMockTest (2)" />
+        <item itemvalue="JUnit.UserAdminMockTest (1)" />
       </list>
     </recent_temporary>
   </component>
