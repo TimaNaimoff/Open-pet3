@@ -18,6 +18,7 @@
             <pattern>%-5level %logger{0}[%file:%line] %msg%n</pattern>
         </encoder>
     </appender>
+    <logger name="org.springframework.jdbc" level="debug"/>
     <logger name="edu.tampa.open_pet3" level="DEBUG"/>
     <root level="INFO">
         <appender-ref ref="file"/>

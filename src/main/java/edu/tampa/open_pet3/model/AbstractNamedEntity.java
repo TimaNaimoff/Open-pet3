@@ -1,15 +1,16 @@
 package edu.tampa.open_pet3.model;
 
-public class NamedEntity {
-    protected Integer id;
+public abstract class AbstractNamedEntity extends BaseEntity{
     protected String name;
-    public NamedEntity(){
+    public static final int START_SEQ=100000;
+    public AbstractNamedEntity(){
 
     }
-    protected NamedEntity(Integer id,String name){
+    protected AbstractNamedEntity(Integer id, String name){
         this.id=id;
         this.name=name;
     }
+
     public void setName(String name){
         this.name=name;
     }

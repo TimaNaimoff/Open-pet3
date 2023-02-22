@@ -1,24 +1,34 @@
 package edu.tampa.open_pet3.model;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;
 
-public class User extends NamedEntity{
+public class User extends AbstractNamedEntity {
     private String email;
     private String password;
     private boolean enabled=true;
-    private Date date=new Date();
+    private Date registered =new Date();
     private Set<Role> authorities;
     public User(){}
+    public User(User user){
+        this(user.getId(),user.getName(),user.getEmail(),user.getPassword(),user.isEnabled(),user.getRegistered(),user.getAuthorities());
+        }
 
-    public User(Integer id,String name,String email,String password,boolean enabled,Date date,Role role,Role...roles){
+    public User(Integer id, String name, String email, String password, boolean enabled, Date registered, Set<Role>authorities){
         super(id,name);
         this.email=email;
         this.password=password;
         this.enabled=enabled;
-        this.date=date;
+        this.registered = registered;
+        this.authorities=authorities;
+    }
+    public User(Integer id, String name, String email, String password, boolean enabled, Date registered, Role role, Role...roles){
+        super(id,name);
+        this.email=email;
+        this.password=password;
+        this.enabled=enabled;
+        this.registered = registered;
         this.authorities= EnumSet.of(role,roles);
     }
     public User(Integer id,String name,String email,String password,Role role,Role...roles) {
@@ -27,6 +37,19 @@ public class User extends NamedEntity{
         this.password = password;
         authorities= EnumSet.of(role,roles);
     }
+    public User(String name,String email,String password,Role role,Role...roles) {
+        super(null, name);
+        this.email = email;
+        this.password = password;
+        authorities= EnumSet.of(role,roles);
+    }
+
+    public User(String name,String email,String password){
+        this.name=name;
+        this.email=email;
+        this.password=password;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -51,12 +74,12 @@ public class User extends NamedEntity{
         this.enabled = enabled;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getRegistered() {
+        return registered;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setRegistered(Date registered) {
+        this.registered = registered;
     }
 
     public Set<Role> getAuthorities() {
@@ -75,7 +98,7 @@ public class User extends NamedEntity{
                 "email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", enabled=" + enabled +
-                ", date=" + date +
+                ", date=" + registered +
                 ", authorities=" + authorities +
                 '}';
     }

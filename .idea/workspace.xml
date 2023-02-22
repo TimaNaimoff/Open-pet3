@@ -15,6 +15,8 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -52,6 +54,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
@@ -61,93 +66,107 @@
       <recent name="C:\Users\malik\Open-pet3\src" />
       <recent name="C:\Users\malik\Open-pet3\src\main\resources\spring" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="edu.tampa.open_pet3" />
+      <recent name="edu.tampa.open_pet3.services" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="edu.tampa.open_pet3.services" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.tampa.open_pet3.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserAdminSpringMockTest">
-    <configuration name="UserAdminMockTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserMealServiceImplTest.save">
+    <configuration name="UserMealServiceImplTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java.edu.tampa.open_pet3.repo.web.*" />
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="java.edu.tampa.open_pet3.repo.web" />
-      <option name="MAIN_CLASS_NAME" value="java.edu.tampa.open_pet3.repo.web.UserAdminMockTest" />
+      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserMealServiceImplTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMealServiceImplTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserMealServiceImplTest" />
+      <option name="METHOD_NAME" value="save" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserAdminMockTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java.edu.tampa.open_pet3.web.mock.*" />
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="java.edu.tampa.open_pet3.web.mock" />
-      <option name="MAIN_CLASS_NAME" value="java.edu.tampa.open_pet3.web.mock.UserAdminMockTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserAdminMockTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java.edu.tampa_open_pet3.web.mock.*" />
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="java.edu.tampa_open_pet3.web.mock" />
-      <option name="MAIN_CLASS_NAME" value="java.edu.tampa_open_pet3.web.mock.UserAdminMockTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserAdminMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Open-pet3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tampa_open_pet3.web.mock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tampa_open_pet3.web.mock" />
-      <option name="MAIN_CLASS_NAME" value="edu.tampa_open_pet3.web.mock.UserAdminMockTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserAdminSpringMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Open-pet3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tampa_open_pet3.web.mock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tampa_open_pet3.web.mock" />
-      <option name="MAIN_CLASS_NAME" value="edu.tampa_open_pet3.web.mock.UserAdminSpringMockTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="save" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserAdminSpringMockTest" />
-        <item itemvalue="JUnit.UserAdminMockTest" />
-        <item itemvalue="JUnit.UserAdminMockTest (3)" />
-        <item itemvalue="JUnit.UserAdminMockTest (2)" />
-        <item itemvalue="JUnit.UserAdminMockTest (1)" />
+        <item itemvalue="JUnit.UserMealServiceImplTest.save" />
+        <item itemvalue="JUnit.UserMealServiceImplTest.delete" />
+        <item itemvalue="JUnit.UserServiceTest.delete" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.save" />
       </list>
     </recent_temporary>
   </component>
