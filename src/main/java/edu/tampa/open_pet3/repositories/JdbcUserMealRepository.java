@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.Assert;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -20,10 +21,9 @@ import java.util.concurrent.Future;
 
 @Repository
 public class JdbcUserMealRepository implements UserMealRepository{
-    private static final BeanPropertyRowMapper<User> ROW_MAPPER=BeanPropertyRowMapper.newInstance(User.class);
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
-    private NamedParameterJdbcTemplate parameterJdbcTemplate;
+    private final NamedParameterJdbcTemplate parameterJdbcTemplate;
     private static final String INSERT_MEALS="INSERT INTO meals(id,local_date_time,description,calories)VALUES(?,?,?,?)";
     private static final String UPDATE_MEALS="UPDATE meals SET local_date_time=?," +
             "description=?,calories=?,id=? WHERE meal_id=?";
@@ -42,6 +42,7 @@ public class JdbcUserMealRepository implements UserMealRepository{
 
     @Override
     public UserMeal save(UserMeal meal, Integer userId) {
+        Assert.notNull(meal,"Object must be null");
         if(meal.isNew()){
             Number newKey=jdbcTemplate.update(INSERT_MEALS,
                     userId,meal.getLocalDateTime(),meal.getDescription(),

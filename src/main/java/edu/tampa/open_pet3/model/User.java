@@ -1,14 +1,30 @@
 package edu.tampa.open_pet3.model;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.*;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;
 
+@Entity
+@Table(name="users",uniqueConstraints = {@UniqueConstraint(columnNames = "email",name="unique_email")})
 public class User extends AbstractNamedEntity {
+   
     private String email;
+    @Column(name="password",nullable=false)
+    @NotEmpty
+    @Length(min=5)
     private String password;
+    @Column(name="enabled",nullable=false)
     private boolean enabled=true;
+    @Column(name="registered",columnDefinition="timestamp default now()")
     private Date registered =new Date();
+    @Enumerated(EnumType.STRING)
+    @CollectionTable(name="users_roles",joinColumns=@JoinColumn(name="user_id"))
+    @Column(name="role")
+    @ElementCollection(fetch=FetchType.EAGER)
     private Set<Role> authorities;
     public User(){}
     public User(User user){

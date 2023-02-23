@@ -1,6 +1,14 @@
 package edu.tampa.open_pet3.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class AbstractNamedEntity extends BaseEntity{
+    @Column(name="name",nullable = false)
+    @NotEmpty
     protected String name;
     public static final int START_SEQ=100000;
     public AbstractNamedEntity(){
