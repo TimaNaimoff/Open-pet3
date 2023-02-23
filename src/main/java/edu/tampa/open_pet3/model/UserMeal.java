@@ -25,7 +25,7 @@ public class UserMeal {
         this.calories=calories;
     }
     public boolean isNew(){
-        return mealId ==null;
+        return mealId == null;
     }
     public Integer getMealId() {
         return mealId;

@@ -2,8 +2,10 @@ package edu.tampa.open_pet3.repositories;
 
 import edu.tampa.open_pet3.model.User;
 import edu.tampa.open_pet3.model.UserMeal;
+import edu.tampa.open_pet3.util.exception.NotFoundException;
 import edu.tampa.open_pet3.util.mappers.MealMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -24,11 +26,11 @@ public class JdbcUserMealRepository implements UserMealRepository{
     private NamedParameterJdbcTemplate parameterJdbcTemplate;
     private static final String INSERT_MEALS="INSERT INTO meals(id,local_date_time,description,calories)VALUES(?,?,?,?)";
     private static final String UPDATE_MEALS="UPDATE meals SET local_date_time=?," +
-            "description=?,calories=? WHERE id=?";
+            "description=?,calories=?,id=? WHERE meal_id=?";
 //    private SimpleJdbcInsert insertUser;
     private static final String DELETE_MEALS="DELETE FROM meals WHERE id=? AND meal_id=?";
-    private static final String GET_ALL="SELECT * FROM meals";
-    private static final String GET_MEAL="SELECT * FROM meals WHERE meal_id = ? AND id = ?";
+    private static final String GET_ALL="SELECT * FROM meals WHERE id=? ORDER BY local_date_time DESC";
+    private static final String GET_MEAL="SELECT * FROM meals WHERE id = ? AND meal_id = ?";
     @Autowired
     public JdbcUserMealRepository(JdbcTemplate jdbcTemplate,NamedParameterJdbcTemplate parameterJdbcTemplate){
 //        this.insertUser=new SimpleJdbcInsert(jdbcTemplate).withTableName("meals")
@@ -47,8 +49,9 @@ public class JdbcUserMealRepository implements UserMealRepository{
             meal.setMealId(newKey.intValue());
         }
         else{
-            jdbcTemplate.update(UPDATE_MEALS,meal.getLocalDateTime(),meal.getDescription(),meal.getCalories(),
-                    userId);
+            int counter=jdbcTemplate.update(UPDATE_MEALS,meal.getLocalDateTime(),meal.getDescription(),meal.getCalories(),
+                    userId,meal.getMealId());
+            if(counter==0)throw new NotFoundException("Object for update not found!");
         }
         return meal;
     }
@@ -61,13 +64,13 @@ public class JdbcUserMealRepository implements UserMealRepository{
 
     @Override
     public UserMeal get(int userId, int mealId) {
-        List<UserMeal>meals= jdbcTemplate.query(GET_MEAL,new MealMapper(),mealId,userId);
-        return meals.isEmpty()?null:meals.get(0);
+        List<UserMeal>meals= jdbcTemplate.query(GET_MEAL,new MealMapper(),userId,mealId);
+        return meals.isEmpty()?null: DataAccessUtils.requiredSingleResult(meals);
     }
 
     @Override
     public Collection<UserMeal> getAll(int userID) {
-           return jdbcTemplate.query(GET_ALL,new MealMapper());
+           return jdbcTemplate.query(GET_ALL,new MealMapper(),userID);
     }
 
     @Override

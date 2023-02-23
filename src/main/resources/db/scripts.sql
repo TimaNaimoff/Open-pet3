@@ -1,7 +1,8 @@
-DELETE FROM users;
 DELETE FROM users_roles;
+DELETE FROM meals;
+DELETE FROM users;
 ALTER SEQUENCE GLOBAL_SEQ RESTART WITH 100000;
-
+ALTER SEQUENCE MEAL_SEQ RESTART WITH 10000;
 --password
 INSERT INTO users(name,password,email)VALUES
 ('Peter','kamaz009','petyakamaz@gmail.com');
