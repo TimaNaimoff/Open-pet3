@@ -1,6 +1,7 @@
-package edu.tampa.open_pet3.repositories;
+package edu.tampa.open_pet3.repositories.mock;
 
 import edu.tampa.open_pet3.model.UserMeal;
+import edu.tampa.open_pet3.repositories.UserMealRepository;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
@@ -12,7 +13,7 @@ import java.util.stream.Collectors;
 
 
 @Repository("inMemoryUserMealRepository")
-public class InMemoryUserMealRepository implements UserMealRepository{
+public class InMemoryUserMealRepository implements UserMealRepository {
     private Map<Integer,Map<Integer,UserMeal>>repository=new ConcurrentHashMap<>();
     private AtomicInteger count=new AtomicInteger(0);
     public static final Comparator<UserMeal>USER_MEAL_COMPARATOR=((um,um2)->um2.getLocalDateTime().compareTo(um.getLocalDateTime()));

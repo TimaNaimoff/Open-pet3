@@ -1,5 +1,6 @@
 package edu.tampa.open_pet3.model;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -10,16 +11,26 @@ import java.util.Set;
 
 @Entity
 @Table(name="users",uniqueConstraints = {@UniqueConstraint(columnNames = "email",name="unique_email")})
+@NamedQueries({
+        @NamedQuery(name=User.DELETE,query="DELETE FROM User u WHERE u.id=:id"),
+        @NamedQuery(name=User.BY_EMAIL,query="SELECT u FROM User u LEFT JOIN FETCH u.authorities WHERE u.email=?1"),
+        @NamedQuery(name=User.ALL_SORTED,query="SELECT u FROM User u LEFT JOIN FETCH u.authorities ORDER BY u.name,u.email"),
+})
 public class User extends AbstractNamedEntity {
-   
+    public static final String DELETE="User.delete";
+    public static final String BY_EMAIL="User.getByEmail";
+    public static final String ALL_SORTED="User.getAllSorted";
+    @Column(name="email",nullable=false,unique=true)
+//    @Email
+//    @NotEmpty
     private String email;
     @Column(name="password",nullable=false)
-    @NotEmpty
-    @Length(min=5)
+//    @NotEmpty
+//    @Length(min=5)
     private String password;
     @Column(name="enabled",nullable=false)
     private boolean enabled=true;
-    @Column(name="registered",columnDefinition="timestamp default now()")
+//    @Column(name="registered",columnDefinition="timestamp default now()")
     private Date registered =new Date();
     @Enumerated(EnumType.STRING)
     @CollectionTable(name="users_roles",joinColumns=@JoinColumn(name="user_id"))

@@ -2,6 +2,7 @@ package edu.tampa.open_pet3.repositories;
 
 import edu.tampa.open_pet3.model.User;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

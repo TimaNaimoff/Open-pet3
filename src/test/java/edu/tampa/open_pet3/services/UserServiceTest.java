@@ -1,9 +1,10 @@
 package edu.tampa.open_pet3.services;
 
-import edu.tampa.open_pet3.model.Role;
 import edu.tampa.open_pet3.model.User;
-import edu.tampa.open_pet3.repositories.JdbcUserRepositoryImpl;
+import edu.tampa.open_pet3.repositories.jdbc.JdbcUserRepositoryImpl;
+import edu.tampa.open_pet3.repositories.jpa.JpaUserRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +13,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static edu.tampa.open_pet3.AppTestCases.*;
 import static edu.tampa.open_pet3.services.UserTestData.assertMatch;
@@ -28,8 +31,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Sql(scripts = "classpath:db/scripts.sql",config=@SqlConfig(encoding="UTF-8"))
 public class UserServiceTest {
+//    @PersistenceContext
+//    private EntityManager em;
+//    JpaUserRepository userService=new JpaUserRepository(em);
     @Autowired
-    private JdbcUserRepositoryImpl userService;
+    UserService userService;
     @Test
     public void save() {
         User user=new User("Smalala","jeronn@gmail.com","tartar009");

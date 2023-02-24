@@ -15,7 +15,7 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static edu.tampa.open_pet3.repositories.InMemoryUserMealRepository.USER_MEAL_COMPARATOR;
+import static edu.tampa.open_pet3.repositories.mock.InMemoryUserMealRepository.USER_MEAL_COMPARATOR;
 
 @Controller
 public class UserMealsRestController {

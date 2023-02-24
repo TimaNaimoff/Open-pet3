@@ -8,7 +8,7 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class AbstractNamedEntity extends BaseEntity{
     @Column(name="name",nullable = false)
-    @NotEmpty
+//    @NotEmpty
     protected String name;
     public static final int START_SEQ=100000;
     public AbstractNamedEntity(){

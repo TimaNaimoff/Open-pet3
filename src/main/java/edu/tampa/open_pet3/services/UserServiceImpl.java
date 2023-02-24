@@ -1,8 +1,7 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.User;
-import edu.tampa.open_pet3.repositories.InMemoryUserMealRepository;
-import edu.tampa.open_pet3.repositories.MockUserRepository;
+import edu.tampa.open_pet3.repositories.mock.MockUserRepository;
 import edu.tampa.open_pet3.repositories.UserRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

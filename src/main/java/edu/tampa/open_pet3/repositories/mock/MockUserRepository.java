@@ -1,6 +1,7 @@
-package edu.tampa.open_pet3.repositories;
+package edu.tampa.open_pet3.repositories.mock;
 
 import edu.tampa.open_pet3.model.User;
+import edu.tampa.open_pet3.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

@@ -2,7 +2,7 @@ package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.UserMeal;
 import edu.tampa.open_pet3.to.UserMealWithExceed;
-import edu.tampa.open_pet3.repositories.InMemoryUserMealRepository;
+import edu.tampa.open_pet3.repositories.mock.InMemoryUserMealRepository;
 import edu.tampa.open_pet3.util.UserMealsUtil;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

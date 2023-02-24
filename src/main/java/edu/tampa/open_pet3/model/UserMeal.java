@@ -1,5 +1,7 @@
 package edu.tampa.open_pet3.model;
 
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -10,6 +12,8 @@ public class UserMeal {
     protected LocalDateTime localDateTime;
     protected String description;
     protected int calories;
+    @ManyToOne(fetch= FetchType.LAZY)
+    private User user;
     public UserMeal(){
 
     }

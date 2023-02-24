@@ -1,7 +1,8 @@
-package edu.tampa.open_pet3.repositories;
+package edu.tampa.open_pet3.repositories.jdbc;
 
 import edu.tampa.open_pet3.model.User;
 import edu.tampa.open_pet3.model.UserMeal;
+import edu.tampa.open_pet3.repositories.UserMealRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import edu.tampa.open_pet3.util.mappers.MealMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import java.util.List;
 import java.util.concurrent.Future;
 
 @Repository
-public class JdbcUserMealRepository implements UserMealRepository{
+public class JdbcUserMealRepository implements UserMealRepository {
     private final JdbcTemplate jdbcTemplate;
 
     private final NamedParameterJdbcTemplate parameterJdbcTemplate;

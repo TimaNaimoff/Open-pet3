@@ -1,7 +1,7 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.UserMeal;
-import edu.tampa.open_pet3.repositories.JdbcUserMealRepository;
+import edu.tampa.open_pet3.repositories.jdbc.JdbcUserMealRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,15 +10,14 @@ import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static edu.tampa.open_pet3.services.UserMealTestData.*;
-import static edu.tampa.open_pet3.services.UserTestData.ADMIN_ID;
 import static edu.tampa.open_pet3.services.UserTestData.USER_ID;
-import static org.junit.Assert.*;
 
 @ContextConfiguration({
         "classpath:spring/spring-app.xml",
@@ -28,6 +27,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @Sql(scripts = "classpath:db/scripts.sql",config=@SqlConfig(encoding="UTF-8"))
 public class UserMealServiceImplTest {
+
     @Autowired
     private JdbcUserMealRepository userMealRepository;
     @Test
