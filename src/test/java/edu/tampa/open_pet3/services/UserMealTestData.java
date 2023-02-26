@@ -15,12 +15,12 @@ public class UserMealTestData {
     );
 
     public static void assertMatch(UserMeal expected, UserMeal actual){
-        assertThat(actual).isEqualToIgnoringGivenFields(expected,"mealId","localDateTime");
+        assertThat(actual).isEqualToIgnoringGivenFields(expected,"localDateTime","user");
     }
     public static void assertMatch(Iterable<UserMeal>actual,UserMeal...expected){
         assertMatch(actual,Arrays.asList(expected));
     }
     public static void assertMatch(Iterable<UserMeal>actual,Iterable<UserMeal>expected){
-        assertThat(actual).usingElementComparatorIgnoringFields("mealId","localDateTime").isEqualTo(expected);
+        assertThat(actual).isEqualTo(expected);
     }
 }

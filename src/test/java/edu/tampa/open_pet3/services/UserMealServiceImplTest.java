@@ -22,6 +22,7 @@ import java.util.List;
 
 import static edu.tampa.open_pet3.services.UserMealTestData.*;
 import static edu.tampa.open_pet3.services.UserTestData.USER_ID;
+import static org.junit.Assert.assertEquals;
 
 @ContextConfiguration({
         "classpath:spring/spring-app.xml",
@@ -38,29 +39,31 @@ public class UserMealServiceImplTest {
 
     }
     @Test
-    @Transactional
     public void save() {
-        UserMeal userMeal=new UserMeal(10000, LocalDateTime.now(),"comanchi",5000);
+        UserMeal userMeal=new UserMeal(10000, LocalDateTime.now(),"comanchik",5000);
         userMealRepository.save(USER_ID,userMeal);
-        assertMatch(userMealRepository.index(USER_ID), List.of(OBJ1,userMeal));
+        assertMatch(userMealRepository.index(USER_ID), List.of(userMeal));
     }
 
     @Test
-    @Transactional
     public void delete() {
-        userMealRepository.delete(100000,10000);
-        assertMatch(userMealRepository.index(100000), new ArrayList<UserMeal>());
+        System.out.println(userMealRepository.get(10000,100000));
+        userMealRepository.delete(10000,100000);
+        assertEquals(userMealRepository.index(100000).size(),1);
     }
 
     @Test
     public void get() {
         UserMeal userMealer=new UserMeal(10000, LocalDateTime.now(),"blablabla",1000);
-        assertMatch(userMealRepository.get(100000,10000),userMealer);
+        assertMatch(userMealRepository.get(10000,100000),userMealer);
     }
 
     @Test
     public void index() {
-        assertMatch(userMealRepository.index(100000),List.of(new UserMeal(10000, LocalDateTime.now(),"blablabla",1000)));
+        ArrayList<UserMeal>lister=new ArrayList<>();
+        lister.add(new UserMeal(10000, null,"blablabla",1000));
+//        System.out.println(lister.equals(userMealRepository.index(100000)));
+        assertMatch(userMealRepository.index(100000),lister);
     }
 
     @Test
@@ -69,11 +72,10 @@ public class UserMealServiceImplTest {
 
 
     @Test
-    @Transactional
     public void update() {
-        UserMeal userMealer=new UserMeal(10001, LocalDateTime.now(),"Serin",4000);
+        UserMeal userMealer=new UserMeal(10000, LocalDateTime.now(),"Serin",4000);
         userMealRepository.save(100000,userMealer);
-        UserMeal mealer=userMealRepository.get(100000,10001);
+        UserMeal mealer=userMealRepository.get(10000,100000);
         assertMatch(userMealer,mealer);
 
     }

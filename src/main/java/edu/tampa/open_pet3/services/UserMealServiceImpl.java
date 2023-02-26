@@ -9,6 +9,7 @@ import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
+@Transactional(readOnly=true,propagation = Propagation.REQUIRED)
 public class UserMealServiceImpl implements UserMealService {
     @Qualifier("jpaUserMealRepository")
     private final JpaUserMealRepository mealRepo;
@@ -32,12 +34,14 @@ public class UserMealServiceImpl implements UserMealService {
 
 
     @Override
+    @Transactional(propagation = Propagation.NESTED)
     public UserMeal save(int userId, UserMeal user) {
           mealRepo.save(user,userId);
           return user;
     }
 
     @Override
+    @Transactional(propagation = Propagation.NESTED)
     public void delete(int id, int userId) throws NotFoundException {
         mealRepo.delete(id,userId);
     }
@@ -50,7 +54,6 @@ public class UserMealServiceImpl implements UserMealService {
     @Override
     public List<UserMeal> index(int userId) {
         List<UserMeal> userMeals= (List<UserMeal>) mealRepo.getAll(userId);
-
         return userMeals==null? Collections.EMPTY_LIST:userMeals;
     }
 
@@ -61,7 +64,7 @@ public class UserMealServiceImpl implements UserMealService {
         return (List<UserMeal>)mealRepo.getBetween(startDateTime,endTime,userid);
     }
 
-
+    @Transactional(propagation=Propagation.NESTED)
     public void update(int userId,UserMeal meal) {
         mealRepo.save(meal,userId);
     }

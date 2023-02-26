@@ -99,7 +99,7 @@
       <recent name="edu.tampa.open_pet3.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserMealServiceImplTest.save">
+  <component name="RunManager" selected="JUnit.UserMealServiceImplTest">
     <configuration name="UserMealServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
@@ -111,6 +111,38 @@
       <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
       <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserMealServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMealServiceImplTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserMealServiceImplTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMealServiceImplTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserMealServiceImplTest" />
+      <option name="METHOD_NAME" value="get" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMealServiceImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
@@ -140,39 +172,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
-      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Open-pet3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
-      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="delete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Open-pet3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
-      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="get" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserMealServiceImplTest" />
+      <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserMealServiceImplTest.save" />
         <item itemvalue="JUnit.UserMealServiceImplTest" />
-        <item itemvalue="JUnit.UserServiceTest.delete" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserServiceTest.get" />
+        <item itemvalue="JUnit.UserMealServiceImplTest.delete" />
+        <item itemvalue="JUnit.UserMealServiceImplTest.update" />
+        <item itemvalue="JUnit.UserMealServiceImplTest.get" />
+        <item itemvalue="JUnit.UserMealServiceImplTest.save" />
       </list>
     </recent_temporary>
   </component>
