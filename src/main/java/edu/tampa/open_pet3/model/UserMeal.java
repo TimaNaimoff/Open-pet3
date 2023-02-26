@@ -1,19 +1,32 @@
 package edu.tampa.open_pet3.model;
 
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 //<<<<<<< HEAD:src/main/java/edu/tzzzzzzzampa/open_pet3/model/UserMeal.java
 
+//@NamedQueries({
+//  @NamedQuery(name=UserMeal.GET,query="SELECT m FROM UserMeal m WHERE m.id=:id " +
+//          "AND m.user.id")
+//})
+@Entity
+@Table(name="meals")
 public class UserMeal {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="meal_id")
     protected Integer mealId;
+    @Column(name="local_date_time")
     protected LocalDateTime localDateTime;
+    @Column(name="description")
     protected String description;
+    @Column(name="calories")
     protected int calories;
-    @ManyToOne(fetch= FetchType.LAZY)
+    @ManyToOne(fetch= FetchType.EAGER)
+    @JoinColumn(name="id")
     private User user;
+
     public UserMeal(){
 
     }
@@ -62,6 +75,15 @@ public class UserMeal {
     public void setCalories(int calories) {
         this.calories = calories;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -99,7 +99,7 @@
       <recent name="edu.tampa.open_pet3.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.save">
+  <component name="RunManager" selected="JUnit.UserMealServiceImplTest.save">
     <configuration name="UserMealServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
@@ -162,7 +162,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
@@ -172,7 +172,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
       <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="save" />
+      <option name="METHOD_NAME" value="get" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceTest.save" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserServiceTest.delete" />
         <item itemvalue="JUnit.UserMealServiceImplTest.save" />
         <item itemvalue="JUnit.UserMealServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceTest.delete" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.get" />
       </list>
     </recent_temporary>
   </component>

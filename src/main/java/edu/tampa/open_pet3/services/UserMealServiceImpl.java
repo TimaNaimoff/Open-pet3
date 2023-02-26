@@ -1,6 +1,7 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.UserMeal;
+import edu.tampa.open_pet3.repositories.jpa.JpaUserMealRepository;
 import edu.tampa.open_pet3.to.UserMealWithExceed;
 import edu.tampa.open_pet3.repositories.mock.InMemoryUserMealRepository;
 import edu.tampa.open_pet3.util.UserMealsUtil;
@@ -8,6 +9,7 @@ import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -17,10 +19,10 @@ import java.util.Objects;
 
 @Service
 public class UserMealServiceImpl implements UserMealService {
-    @Qualifier("inMemoryUserMealRepository")
-    private final InMemoryUserMealRepository mealRepo;
+    @Qualifier("jpaUserMealRepository")
+    private final JpaUserMealRepository mealRepo;
     @Autowired
-    public UserMealServiceImpl(InMemoryUserMealRepository mealRepo){
+    public UserMealServiceImpl(JpaUserMealRepository mealRepo){
         this.mealRepo=mealRepo;
     }
     public static List<UserMealWithExceed>filter(){
@@ -59,11 +61,8 @@ public class UserMealServiceImpl implements UserMealService {
         return (List<UserMeal>)mealRepo.getBetween(startDateTime,endTime,userid);
     }
 
-    public void deleteAll(int userId) {
-         mealRepo.clear();
-    }
 
     public void update(int userId,UserMeal meal) {
-        mealRepo.update(userId,meal);
+        mealRepo.save(meal,userId);
     }
 }

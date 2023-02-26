@@ -1,6 +1,7 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.User;
+import edu.tampa.open_pet3.repositories.jpa.JpaUserRepository;
 import edu.tampa.open_pet3.repositories.mock.MockUserRepository;
 import edu.tampa.open_pet3.repositories.UserRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
@@ -12,20 +13,20 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService{
-    @Qualifier("inMemoryUserRepository")
-    private MockUserRepository mockUserRepository;
+    @Qualifier("jpaUserRepository")
+    private JpaUserRepository jpaUserRepository;
     @Autowired
-    public UserServiceImpl(MockUserRepository mockUserRepository){
-        this.mockUserRepository=mockUserRepository;
+    public UserServiceImpl(JpaUserRepository jpaUserRepository){
+        this.jpaUserRepository=jpaUserRepository;
     }
     @Override
     public User save(User user) {
-        return mockUserRepository.save(user);
+        return jpaUserRepository.save(user);
     }
 
     @Override
     public void delete(int id) throws NotFoundException {
-        if(!mockUserRepository.delete(id)){
+        if(!jpaUserRepository.delete(id)){
             throw new NotFoundException("Method:delete,send 0 in argument!");
         }
 
@@ -33,29 +34,31 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User get(int id) throws NotFoundException {
-        return mockUserRepository.get(id);
+        User user = jpaUserRepository.get(id);
+        if(user==null)throw new NotFoundException("Entity not found lol!");
+        return user;
     }
 
     @Override
     public User getByEmail(String email) throws NotFoundException {
-        return mockUserRepository.getByMail(email);
+        return jpaUserRepository.getByMail(email);
     }
 
     @Override
     public List<User> getAll() {
-        return mockUserRepository.getAll();
+        return jpaUserRepository.getAll();
     }
 
     @Override
     public void update(User user) throws NotFoundException {
-         mockUserRepository.save(user);
+         jpaUserRepository.save(user);
     }
 
     public UserRepository getUserRepository() {
-        return mockUserRepository;
+        return jpaUserRepository;
     }
 
-    public void setUserRepository(MockUserRepository mockUserRepository) {
-        this.mockUserRepository = mockUserRepository;
+    public void setUserRepository(JpaUserRepository jpaUserRepository) {
+        this.jpaUserRepository = jpaUserRepository;
     }
 }

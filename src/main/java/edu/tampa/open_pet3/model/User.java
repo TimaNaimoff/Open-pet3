@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.EnumSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -37,6 +38,8 @@ public class User extends AbstractNamedEntity {
     @Column(name="role")
     @ElementCollection(fetch=FetchType.EAGER)
     private Set<Role> authorities;
+    @OneToMany(mappedBy = "user",fetch=FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<UserMeal> meals;
     public User(){}
     public User(User user){
         this(user.getId(),user.getName(),user.getEmail(),user.getPassword(),user.isEnabled(),user.getRegistered(),user.getAuthorities());
@@ -116,6 +119,15 @@ public class User extends AbstractNamedEntity {
     public void setAuthorities(Set<Role> authorities) {
         this.authorities = authorities;
     }
+
+    public List<UserMeal> getMeals() {
+        return meals;
+    }
+
+    public void setMeals(List<UserMeal> meals) {
+        this.meals = meals;
+    }
+
     public boolean isNew(){
         return id==null;
     }

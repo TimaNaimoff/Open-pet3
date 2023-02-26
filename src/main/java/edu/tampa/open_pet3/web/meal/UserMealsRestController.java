@@ -46,11 +46,11 @@ public class UserMealsRestController {
                 LocalTime.MIN,LocalTime.MAX, LoggedUser.getCaloriesPerDay());
     }
 
-    public void deleteAll(){
-        int userId=LoggedUser.id();
-        LOG.info("deleteAll for User {}",userId);
-        userMealService.deleteAll(userId);
-    }
+//    public void deleteAll(){
+//        int userId=LoggedUser.id();
+//        LOG.info("deleteAll for User {}",userId);
+//        userMealService.deleteAll(userId);
+//    }
     public void update(UserMeal meal){
 
         int userId=LoggedUser.id();

@@ -35,8 +35,9 @@ public class UserServiceTest {
 //    private EntityManager em;
 //    JpaUserRepository userService=new JpaUserRepository(em);
     @Autowired
-    UserService userService;
+    private UserServiceImpl userService;
     @Test
+    @Transactional
     public void save() {
         User user=new User("Smalala","jeronn@gmail.com","tartar009");
         User created=userService.save(user);
@@ -45,6 +46,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @Transactional
     public void delete() {
         userService.delete(USER_ID);
         assertMatch(userService.getAll(),ADMIN);
