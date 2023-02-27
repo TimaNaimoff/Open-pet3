@@ -23,6 +23,7 @@
     <hibernate.version>5.4.7.Final</hibernate.version>
     <hibernate-validator.version>6.0.17.Final</hibernate-validator.version>
     <javax-el.version>3.0.1-b11</javax-el.version>
+    <tomcat.version>9.0.67</tomcat.version>
   </properties>
 
   <dependencies>
@@ -144,7 +145,27 @@
     </dependency>
 
   </dependencies>
-
+  <profiles>
+    <profile>
+      <id>postgres</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.postgresql</groupId>
+          <artifactId>postgresql</artifactId>
+          <version>42.5.1</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>tomcat-jdbc</artifactId>
+          <version>${tomcat.version}</version>
+        </dependency>
+      </dependencies>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+  </profiles>
+  <dependencyManagement></dependencyManagement>
   <build>
     <finalName>Open-pet3</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

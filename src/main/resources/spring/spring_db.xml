@@ -50,4 +50,16 @@
        <bean id="namedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
             <constructor-arg ref="jdbcTemplate"/>
         </bean>
+    <beans profile="postgres">
+        <context:property-placeholder location="classpath:db/postgres.properties"
+                                      system-properties-mode="OVERRIDE"/>
+        <bean id="dataSource"
+              class="org.apache.tomcat.jdbc.pool.DataSource"
+              p:driverClassName="${database.driverClassName"
+              p:url="${database.url}"
+              p:username="${database.username}"
+              p:password="${database.password}"
+        />
+
+    </beans>
 </beans>

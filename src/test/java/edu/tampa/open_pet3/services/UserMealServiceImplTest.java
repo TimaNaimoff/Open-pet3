@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
@@ -30,6 +31,7 @@ import static org.junit.Assert.assertEquals;
 }
 )
 @RunWith(SpringJUnit4ClassRunner.class)
+@ActiveProfiles("postgres")
 @Sql(scripts = "classpath:db/scripts.sql",config=@SqlConfig(encoding="UTF-8"))
 public class UserMealServiceImplTest {
     @Autowired
@@ -39,6 +41,7 @@ public class UserMealServiceImplTest {
 
     }
     @Test
+    @Transactional
     public void save() {
         UserMeal userMeal=new UserMeal(10000, LocalDateTime.now(),"comanchik",5000);
         userMealRepository.save(USER_ID,userMeal);
@@ -46,6 +49,7 @@ public class UserMealServiceImplTest {
     }
 
     @Test
+    @Transactional
     public void delete() {
         System.out.println(userMealRepository.get(10000,100000));
         userMealRepository.delete(10000,100000);
@@ -72,6 +76,7 @@ public class UserMealServiceImplTest {
 
 
     @Test
+    @Transactional
     public void update() {
         UserMeal userMealer=new UserMeal(10000, LocalDateTime.now(),"Serin",4000);
         userMealRepository.save(100000,userMealer);

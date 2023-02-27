@@ -34,14 +34,14 @@ public class UserMealServiceImpl implements UserMealService {
 
 
     @Override
-    @Transactional(propagation = Propagation.NESTED)
+    @Transactional
     public UserMeal save(int userId, UserMeal user) {
           mealRepo.save(user,userId);
           return user;
     }
 
     @Override
-    @Transactional(propagation = Propagation.NESTED)
+    @Transactional
     public void delete(int id, int userId) throws NotFoundException {
         mealRepo.delete(id,userId);
     }
