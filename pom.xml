@@ -24,6 +24,7 @@
     <hibernate-validator.version>6.0.17.Final</hibernate-validator.version>
     <javax-el.version>3.0.1-b11</javax-el.version>
     <tomcat.version>9.0.67</tomcat.version>
+    <spirng-data-jpa.version>1.8.0.RELEASE</spirng-data-jpa.version>
   </properties>
 
   <dependencies>
@@ -124,11 +125,6 @@
       <version>${spring.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-orm</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-    <dependency>
          <groupId>org.hibernate</groupId>
          <artifactId>hibernate-entitymanager</artifactId>
          <version>${hibernate.version}</version>
@@ -137,6 +133,11 @@
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>${hibernate-validator.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>2.3.8.RELEASE</version>
     </dependency>
     <dependency>
         <groupId>javax.servlet</groupId>
@@ -165,7 +166,17 @@
       </activation>
     </profile>
   </profiles>
-  <dependencyManagement></dependencyManagement>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>${spring.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <build>
     <finalName>Open-pet3</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
