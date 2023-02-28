@@ -3,12 +3,16 @@ package edu.tampa.open_pet3.repositories.datajpa;
 import edu.tampa.open_pet3.model.User;
 import edu.tampa.open_pet3.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
 public class DataJpaUserRepository implements UserRepository {
+    private static final Sort SORT_NAME_EMAIL = Sort.by("email","name");
+
+
     private ProxyUserRepository proxyUserRepository;
 
     @Autowired
@@ -37,6 +41,6 @@ public class DataJpaUserRepository implements UserRepository {
 
     @Override
     public List<User> getAll() {
-        return proxyUserRepository.findAll();
+        return proxyUserRepository.findAll(SORT_NAME_EMAIL);
     }
 }

@@ -1,6 +1,7 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.User;
+import edu.tampa.open_pet3.repositories.datajpa.DataJpaUserRepository;
 import edu.tampa.open_pet3.repositories.jpa.JpaUserRepository;
 import edu.tampa.open_pet3.repositories.mock.MockUserRepository;
 import edu.tampa.open_pet3.repositories.UserRepository;
@@ -13,10 +14,10 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService{
-    @Qualifier("jpaUserRepository")
-    private JpaUserRepository jpaUserRepository;
+//    @Qualifier("jpaUserRepository")
+    private DataJpaUserRepository jpaUserRepository;
     @Autowired
-    public UserServiceImpl(JpaUserRepository jpaUserRepository){
+    public UserServiceImpl(DataJpaUserRepository jpaUserRepository){
         this.jpaUserRepository=jpaUserRepository;
     }
     @Override
@@ -58,7 +59,7 @@ public class UserServiceImpl implements UserService{
         return jpaUserRepository;
     }
 
-    public void setUserRepository(JpaUserRepository jpaUserRepository) {
+    public void setUserRepository(DataJpaUserRepository jpaUserRepository) {
         this.jpaUserRepository = jpaUserRepository;
     }
 }
