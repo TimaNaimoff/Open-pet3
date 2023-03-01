@@ -1,6 +1,7 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.UserMeal;
+import edu.tampa.open_pet3.repositories.datajpa.DataJpaUserMealRepository;
 import edu.tampa.open_pet3.repositories.jpa.JpaUserMealRepository;
 import edu.tampa.open_pet3.to.UserMealWithExceed;
 import edu.tampa.open_pet3.repositories.mock.InMemoryUserMealRepository;
@@ -8,6 +9,8 @@ import edu.tampa.open_pet3.util.UserMealsUtil;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,10 +24,9 @@ import java.util.Objects;
 @Service
 @Transactional(readOnly=true,propagation = Propagation.REQUIRED)
 public class UserMealServiceImpl implements UserMealService {
-    @Qualifier("jpaUserMealRepository")
-    private final JpaUserMealRepository mealRepo;
+    private final DataJpaUserMealRepository mealRepo;
     @Autowired
-    public UserMealServiceImpl(JpaUserMealRepository mealRepo){
+    public UserMealServiceImpl(DataJpaUserMealRepository mealRepo){
         this.mealRepo=mealRepo;
     }
     public static List<UserMealWithExceed>filter(){
@@ -35,6 +37,7 @@ public class UserMealServiceImpl implements UserMealService {
 
     @Override
     @Transactional
+    @CacheEvict(value="users",allEntries=true)
     public UserMeal save(int userId, UserMeal user) {
           mealRepo.save(user,userId);
           return user;
@@ -42,6 +45,7 @@ public class UserMealServiceImpl implements UserMealService {
 
     @Override
     @Transactional
+    @CacheEvict(value="users",allEntries=true)
     public void delete(int id, int userId) throws NotFoundException {
         mealRepo.delete(id,userId);
     }
@@ -52,6 +56,7 @@ public class UserMealServiceImpl implements UserMealService {
     }
 
     @Override
+    @Cacheable("users")
     public List<UserMeal> index(int userId) {
         List<UserMeal> userMeals= (List<UserMeal>) mealRepo.getAll(userId);
         return userMeals==null? Collections.EMPTY_LIST:userMeals;
@@ -65,6 +70,7 @@ public class UserMealServiceImpl implements UserMealService {
     }
 
     @Transactional(propagation=Propagation.NESTED)
+    @CacheEvict(value="users",allEntries=true)
     public void update(int userId,UserMeal meal) {
         mealRepo.save(meal,userId);
     }

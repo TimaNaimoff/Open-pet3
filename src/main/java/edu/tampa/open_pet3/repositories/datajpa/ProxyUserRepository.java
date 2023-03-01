@@ -19,10 +19,11 @@ public interface ProxyUserRepository extends JpaRepository<User,Integer> {
     int delete(int i);
     @Override
     User save(User user);
+    @Query("FROM User u WHERE u.id=?1")
     @Override
     User getOne(Integer id);
-    @Override
-    List<User> findAll(Sort sort);
+    @Query("FROM User u ORDER BY u.name")
+    List<User> findAllMeals();
 
     User getByEmail(String email);
 }

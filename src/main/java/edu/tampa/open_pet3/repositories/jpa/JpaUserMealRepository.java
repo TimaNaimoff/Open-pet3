@@ -19,7 +19,9 @@ import java.util.List;
 public class JpaUserMealRepository implements UserMealRepository {
     @PersistenceContext
     private EntityManager entityManager;
+
     @Override
+    @Transactional
     public UserMeal save(UserMeal meal, Integer userId) {
         User ref=entityManager.getReference(User.class,userId);
         meal.setUser(ref);
@@ -33,6 +35,7 @@ public class JpaUserMealRepository implements UserMealRepository {
     }
 
     @Override
+    @Transactional
     public boolean delete(int id, int userId) {
         User user=entityManager.find(User.class,userId);
         UserMeal userMeal=entityManager.find(UserMeal.class,id);

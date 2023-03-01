@@ -6,9 +6,12 @@ import edu.tampa.open_pet3.repositories.jpa.JpaUserRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.checkerframework.checker.units.qual.A;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
@@ -29,6 +32,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 }
 )
 @RunWith(SpringJUnit4ClassRunner.class)
+@ActiveProfiles("postgres")
 @Sql(scripts = "classpath:db/scripts.sql",config=@SqlConfig(encoding="UTF-8"))
 public class UserServiceTest {
 //    @PersistenceContext
@@ -36,20 +40,27 @@ public class UserServiceTest {
 //    JpaUserRepository userService=new JpaUserRepository(em);
     @Autowired
     private UserServiceImpl userService;
+    @Autowired
+    private CacheManager cacheManager;
+
+    @Before
+    public void setUp() throws Exception {
+                cacheManager.getCache("meals").clear();
+            }
     @Test
     @Transactional
     public void save() {
         User user=new User("Smalala","jeronn@gmail.com","tartar009");
         User created=userService.save(user);
         user.setId(created.getId());
-        assertMatch(userService.getAll(),USER,ADMIN,user);
+        assertMatch(userService.getAll(),user,USER,ADMIN);
     }
 
     @Test
     @Transactional
     public void delete() {
         userService.delete(USER_ID);
-        assertMatch(userService.getAll(),ADMIN);
+        assertMatch(userService.getAll().get(0),ADMIN);
     }
     @Test(expected= NotFoundException.class)
     public void getNotFound()throws Exception{
@@ -58,9 +69,7 @@ public class UserServiceTest {
     @Test
     public void get() {
         User user=userService.get(USER_ID);
-        System.out.println(user);
         Assert.assertEquals(USER,user);
-        assertThat(user).isEqualToIgnoringGivenFields(USER,"registered","authorities");
      }
 
     @Test

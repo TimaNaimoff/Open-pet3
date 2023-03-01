@@ -12,13 +12,9 @@ import java.util.List;
 public class DataJpaUserRepository implements UserRepository {
     private static final Sort SORT_NAME_EMAIL = Sort.by("email","name");
 
-
+    @Autowired
     private ProxyUserRepository proxyUserRepository;
 
-    @Autowired
-    public DataJpaUserRepository(ProxyUserRepository proxyUserRepository){
-        this.proxyUserRepository=proxyUserRepository;
-    }
     @Override
     public User save(User user) {
         return proxyUserRepository.save(user);
@@ -41,6 +37,6 @@ public class DataJpaUserRepository implements UserRepository {
 
     @Override
     public List<User> getAll() {
-        return proxyUserRepository.findAll(SORT_NAME_EMAIL);
+        return proxyUserRepository.findAllMeals();
     }
 }

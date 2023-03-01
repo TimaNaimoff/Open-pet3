@@ -31,14 +31,14 @@ public class User extends AbstractNamedEntity {
     private String password;
     @Column(name="enabled",nullable=false)
     private boolean enabled=true;
-//    @Column(name="registered",columnDefinition="timestamp default now()")
+    @Column(name="registered",columnDefinition="timestamp default now()")
     private Date registered =new Date();
     @Enumerated(EnumType.STRING)
     @CollectionTable(name="users_roles",joinColumns=@JoinColumn(name="user_id"))
     @Column(name="role")
     @ElementCollection(fetch=FetchType.EAGER)
     private Set<Role> authorities;
-    @OneToMany(mappedBy = "user",fetch=FetchType.LAZY,cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",fetch=FetchType.EAGER,cascade = CascadeType.ALL)
     private List<UserMeal> meals;
     public User(){}
     public User(User user){
@@ -137,7 +137,7 @@ public class User extends AbstractNamedEntity {
                 "email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", enabled=" + enabled +
-                ", date=" + registered +
+                ", registered=" + registered +
                 ", authorities=" + authorities +
                 '}';
     }

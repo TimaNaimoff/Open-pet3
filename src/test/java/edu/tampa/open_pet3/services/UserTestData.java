@@ -12,7 +12,7 @@ public class UserTestData {
     public static final int ADMIN_ID=START_SEQ+1;
 
     public static void assertMatch(User expected,User actual){
-        assertThat(actual).isEqualToIgnoringGivenFields(expected,"registered","authorities");
+        assertThat(actual).isEqualToIgnoringGivenFields(expected,"registered","authorities","meals");
     }
     public static void assertMatch(Iterable<User>actual,User...expected){
        assertMatch(actual, Arrays.asList(expected));

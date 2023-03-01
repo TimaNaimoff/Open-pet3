@@ -33,7 +33,7 @@ public class UserMeal {
     protected String description;
     @Column(name="calories")
     protected int calories;
-    @ManyToOne(fetch= FetchType.EAGER)
+    @ManyToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="id")
     private User user;
 

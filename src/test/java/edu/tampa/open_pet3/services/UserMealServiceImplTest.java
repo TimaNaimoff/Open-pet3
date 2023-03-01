@@ -4,10 +4,12 @@ import edu.tampa.open_pet3.model.UserMeal;
 import edu.tampa.open_pet3.repositories.jdbc.JdbcUserMealRepository;
 import edu.tampa.open_pet3.repositories.jpa.JpaUserMealRepository;
 import edu.tampa.open_pet3.repositories.jpa.JpaUserRepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.CacheManager;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
@@ -36,6 +38,13 @@ import static org.junit.Assert.assertEquals;
 public class UserMealServiceImplTest {
     @Autowired
     private UserMealServiceImpl userMealRepository;
+    @Autowired
+    private CacheManager cacheManager;
+
+    @Before
+    public void setUp() throws Exception {
+        cacheManager.getCache("users").clear();
+    }
     @Test
     public void filter() {
 
