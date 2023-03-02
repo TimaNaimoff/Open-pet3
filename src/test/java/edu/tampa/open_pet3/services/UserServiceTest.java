@@ -43,10 +43,10 @@ public class UserServiceTest {
     @Autowired
     private CacheManager cacheManager;
 
-    @Before
-    public void setUp() throws Exception {
-                cacheManager.getCache("meals").clear();
-            }
+//    @Before
+//    public void setUp() throws Exception {
+//                cacheManager.getCache("users").clear();
+//            }
     @Test
     @Transactional
     public void save() {

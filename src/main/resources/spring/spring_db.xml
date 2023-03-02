@@ -19,7 +19,7 @@
        <jpa:repositories base-package="edu.tampa.**.repositories.datajpa"/>
 
 <!--    <context:property-placeholder location="classpath:/db/postgres.properties"/>-->
-
+<!--   <beans profile="datajpa,jpa">-->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
               p:dataSource-ref="dataSource"
               p:packagesToScan="edu.tampa.**.model">         <!--p:persistenceUnitName="persistenceUnit">-->
@@ -38,16 +38,18 @@
                 </bean>
             </property>
             </bean>
-    <bean id="transactionManager"
-          class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
+       <bean id="transactionManager"
+             class="org.springframework.orm.jpa.JpaTransactionManager">
+           <property name="entityManagerFactory" ref="entityManagerFactory"/>
+       </bean>
        <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
            <constructor-arg ref="dataSource"/>
        </bean>
        <bean id="namedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
-            <constructor-arg ref="jdbcTemplate"/>
-        </bean>
+           <constructor-arg ref="jdbcTemplate"/>
+       </bean>
+<!--   </beans>-->
+ 
     <beans profile="postgres">
         <context:property-placeholder location="classpath:db/postgres.properties"
                                       system-properties-mode="OVERRIDE"/>

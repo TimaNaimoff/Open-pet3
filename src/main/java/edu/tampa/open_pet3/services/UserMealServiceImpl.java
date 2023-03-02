@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-@Transactional(readOnly=true,propagation = Propagation.REQUIRED)
 public class UserMealServiceImpl implements UserMealService {
     private final DataJpaUserMealRepository mealRepo;
     @Autowired
@@ -34,18 +33,25 @@ public class UserMealServiceImpl implements UserMealService {
     }
 
 
-
+//    @Override
+//    @CacheEvict(value="users",allEntries = true)
+//    public void evictCache() {
+//
+//    }
     @Override
     @Transactional
-    @CacheEvict(value="users",allEntries=true)
+    @CacheEvict(value="meals",allEntries=true)
     public UserMeal save(int userId, UserMeal user) {
           mealRepo.save(user,userId);
           return user;
     }
 
+    public DataJpaUserMealRepository getMealRepo() {
+        return mealRepo;
+    }
+
     @Override
-    @Transactional
-    @CacheEvict(value="users",allEntries=true)
+    @CacheEvict(value="meals",allEntries=true)
     public void delete(int id, int userId) throws NotFoundException {
         mealRepo.delete(id,userId);
     }
@@ -56,7 +62,7 @@ public class UserMealServiceImpl implements UserMealService {
     }
 
     @Override
-    @Cacheable("users")
+//    @Cacheable("meals")
     public List<UserMeal> index(int userId) {
         List<UserMeal> userMeals= (List<UserMeal>) mealRepo.getAll(userId);
         return userMeals==null? Collections.EMPTY_LIST:userMeals;
@@ -69,8 +75,7 @@ public class UserMealServiceImpl implements UserMealService {
         return (List<UserMeal>)mealRepo.getBetween(startDateTime,endTime,userid);
     }
 
-    @Transactional(propagation=Propagation.NESTED)
-    @CacheEvict(value="users",allEntries=true)
+    @CacheEvict(value="meals",allEntries=true)
     public void update(int userId,UserMeal meal) {
         mealRepo.save(meal,userId);
     }

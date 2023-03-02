@@ -40,10 +40,9 @@ public class UserMealServiceImplTest {
     private UserMealServiceImpl userMealRepository;
     @Autowired
     private CacheManager cacheManager;
-
     @Before
     public void setUp() throws Exception {
-        cacheManager.getCache("users").clear();
+        cacheManager.getCache("meals").clear();
     }
     @Test
     public void filter() {

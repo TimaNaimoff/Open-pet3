@@ -8,6 +8,7 @@ import edu.tampa.open_pet3.repositories.UserRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -54,6 +55,12 @@ public class UserServiceImpl implements UserService{
     public void update(User user) throws NotFoundException {
          jpaUserRepository.save(user);
     }
+
+//    @Override
+//    @CacheEvict(value="users",allEntries = true)
+//    public void evictCache() {
+//
+//    }
 
     public UserRepository getUserRepository() {
         return jpaUserRepository;

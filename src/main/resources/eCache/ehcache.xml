@@ -9,9 +9,9 @@
 
             <cache-template name="expiryCache">
         <expiry>
-                <ttl unit="minutes">5</ttl>
+                <ttl unit="minutes">1</ttl>
             </expiry>
-        <heap unit="entries">5000</heap>
+        <heap unit="entries">500</heap>
     </cache-template>
 
             <cache-template name="singleNonExpiryCache">
@@ -22,4 +22,6 @@
     </cache-template>
 
 <cache alias="users" uses-template="singleNonExpiryCache"/>
+<cache alias="meals" uses-template="singleNonExpiryCache"/>
+
 </config>
