@@ -2,6 +2,7 @@ package edu.tampa.open_pet3.web.meal;
 
 
 import edu.tampa.open_pet3.model.UserMeal;
+import edu.tampa.open_pet3.util.Profiles;
 import edu.tampa.open_pet3.util.UserMealsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,11 +24,11 @@ import java.util.Objects;
 public class UserMealsServlet extends HttpServlet {
     private static final Logger LOG= LoggerFactory.getLogger(UserMealsServlet.class);
     private  UserMealsRestController mealsRestController;
-    private ConfigurableApplicationContext applicationContext;
+    private ClassPathXmlApplicationContext applicationContext;
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         super.init(servletConfig);
-        applicationContext = new ClassPathXmlApplicationContext("java/edu/tampa_open_pet3/spring/spring-app.xml ");
+        applicationContext = new ClassPathXmlApplicationContext("classpath:spring/spring-app.xml ");
         mealsRestController=applicationContext.getBean(UserMealsRestController.class);
     }
 

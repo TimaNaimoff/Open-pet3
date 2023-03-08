@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.Collection;
 
@@ -22,14 +23,14 @@ public class DataJpaUserMealRepository  implements UserMealRepository  {
     @Transactional
     public UserMeal save(UserMeal meal, Integer userId) {
         User user=proxyUserRepository.getOne(userId);
-        user.getMeals().add(meal);
+        meal.setUser(user);
         return proxyUserMealRepository.save(meal);
     }
 
     @Override
     @Transactional
     public boolean delete(int id, int userId) {
-        return proxyUserMealRepository.delete(id)!=0;
+        return proxyUserMealRepository.delete(id,userId)!=0;
     }
 
     @Override

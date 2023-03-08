@@ -1,7 +1,6 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.UserMeal;
-import edu.tampa.open_pet3.repositories.jdbc.JdbcUserMealRepository;
 import edu.tampa.open_pet3.repositories.jpa.JpaUserMealRepository;
 import edu.tampa.open_pet3.repositories.jpa.JpaUserRepository;
 import org.junit.Before;
@@ -27,23 +26,16 @@ import static edu.tampa.open_pet3.services.UserMealTestData.*;
 import static edu.tampa.open_pet3.services.UserTestData.USER_ID;
 import static org.junit.Assert.assertEquals;
 
-@ContextConfiguration({
-        "classpath:spring/spring-app.xml",
-        "classpath:spring/spring_db.xml"
-}
-)
-@RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles("postgres")
-@Sql(scripts = "classpath:db/scripts.sql",config=@SqlConfig(encoding="UTF-8"))
-public class UserMealServiceImplTest {
+
+public class UserMealServiceImplTest extends AbstractTests{
     @Autowired
     private UserMealServiceImpl userMealRepository;
-    @Autowired
-    private CacheManager cacheManager;
-    @Before
-    public void setUp() throws Exception {
-        cacheManager.getCache("meals").clear();
-    }
+//    @Autowired
+//    private CacheManager cacheManager;
+//    @Before
+//    public void setUp() throws Exception {
+//        cacheManager.getCache("meals").clear();
+    //}
     @Test
     public void filter() {
 
@@ -59,7 +51,7 @@ public class UserMealServiceImplTest {
     @Test
     @Transactional
     public void delete() {
-        System.out.println(userMealRepository.get(10000,100000));
+//        System.out.println(userMealRepository.get(10000,100000));
         userMealRepository.delete(10000,100000);
         assertEquals(userMealRepository.index(100000).size(),1);
     }

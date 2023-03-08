@@ -23,11 +23,9 @@ import java.util.Objects;
 
 @Service
 public class UserMealServiceImpl implements UserMealService {
-    private final DataJpaUserMealRepository mealRepo;
     @Autowired
-    public UserMealServiceImpl(DataJpaUserMealRepository mealRepo){
-        this.mealRepo=mealRepo;
-    }
+    @Qualifier("dataJpaUserMealRepository")
+    private  DataJpaUserMealRepository mealRepo;
     public static List<UserMealWithExceed>filter(){
         return UserMealsUtil.getFilteredMealsWithExceeded(UserMealsUtil.LISTER,LocalTime.of(0,7), LocalTime.of(12,0),2000);
     }
@@ -40,7 +38,7 @@ public class UserMealServiceImpl implements UserMealService {
 //    }
     @Override
     @Transactional
-    @CacheEvict(value="meals",allEntries=true)
+//    @CacheEvict(value="meals",allEntries=true)
     public UserMeal save(int userId, UserMeal user) {
           mealRepo.save(user,userId);
           return user;
@@ -51,7 +49,8 @@ public class UserMealServiceImpl implements UserMealService {
     }
 
     @Override
-    @CacheEvict(value="meals",allEntries=true)
+    @Transactional
+//    @CacheEvict(value="meals",allEntries=true)
     public void delete(int id, int userId) throws NotFoundException {
         mealRepo.delete(id,userId);
     }
@@ -75,7 +74,7 @@ public class UserMealServiceImpl implements UserMealService {
         return (List<UserMeal>)mealRepo.getBetween(startDateTime,endTime,userid);
     }
 
-    @CacheEvict(value="meals",allEntries=true)
+//    @CacheEvict(value="meals",allEntries=true)
     public void update(int userId,UserMeal meal) {
         mealRepo.save(meal,userId);
     }

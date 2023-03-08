@@ -1,7 +1,6 @@
 package edu.tampa.open_pet3.services;
 
 import edu.tampa.open_pet3.model.User;
-import edu.tampa.open_pet3.repositories.jdbc.JdbcUserRepositoryImpl;
 import edu.tampa.open_pet3.repositories.jpa.JpaUserRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import org.checkerframework.checker.units.qual.A;
@@ -26,22 +25,14 @@ import static edu.tampa.open_pet3.AppTestCases.*;
 import static edu.tampa.open_pet3.services.UserTestData.assertMatch;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ContextConfiguration({
-        "classpath:spring/spring-app.xml",
-        "classpath:spring/spring_db.xml"
-}
-)
-@RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles("postgres")
-@Sql(scripts = "classpath:db/scripts.sql",config=@SqlConfig(encoding="UTF-8"))
-public class UserServiceTest {
+public class UserServiceTest extends AbstractTests{
 //    @PersistenceContext
 //    private EntityManager em;
 //    JpaUserRepository userService=new JpaUserRepository(em);
     @Autowired
     private UserServiceImpl userService;
-    @Autowired
-    private CacheManager cacheManager;
+//    @Autowired
+//    private CacheManager cacheManager;
 
 //    @Before
 //    public void setUp() throws Exception {

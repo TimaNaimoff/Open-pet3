@@ -60,6 +60,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="2LGunTHeoPxFoFvemz90ZDA021b" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -99,7 +102,20 @@
       <recent name="edu.tampa.open_pet3.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserMealServiceImplTest">
+  <component name="RunManager" selected="Application.SpringMain">
+    <configuration name="SpringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.SpringMain" />
+      <module name="Open-pet3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tampa.open_pet3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserMealServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
@@ -147,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTRealis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Open-pet3" />
       <extension name="coverage">
         <pattern>
@@ -156,35 +172,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
-      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTRealis" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Open-pet3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tampa.open_pet3.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tampa.open_pet3.services" />
-      <option name="MAIN_CLASS_NAME" value="edu.tampa.open_pet3.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="delete" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SpringMain" />
+        <item itemvalue="JUnit.UserServiceTRealis" />
         <item itemvalue="JUnit.UserMealServiceImplTest" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserMealServiceImplTest.delete" />
         <item itemvalue="JUnit.UserMealServiceImplTest.save" />
-        <item itemvalue="JUnit.UserServiceTest.delete" />
+        <item itemvalue="JUnit.UserMealServiceImplTest.delete" />
       </list>
     </recent_temporary>
   </component>
@@ -232,6 +232,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.springframework.beans.factory.NoSuchBeanDefinitionException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
