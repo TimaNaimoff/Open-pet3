@@ -3,6 +3,7 @@ package edu.tampa.open_pet3.repositories.jdbc;
 import edu.tampa.open_pet3.model.User;
 import edu.tampa.open_pet3.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -12,9 +13,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Repository("jdbcUserRepositoryImpl")
 public class JdbcUserRepositoryImpl implements UserRepository {
     private static final BeanPropertyRowMapper<User>ROW_MAPPER=BeanPropertyRowMapper.newInstance(User.class);
+
     private JdbcTemplate jdbcTemplate;
 
     private NamedParameterJdbcTemplate parameterJdbcTemplate;

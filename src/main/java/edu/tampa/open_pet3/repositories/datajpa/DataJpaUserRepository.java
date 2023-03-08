@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Repository("dataJpaUserRepository")
 public class DataJpaUserRepository implements UserRepository {
     private static final Sort SORT_NAME_EMAIL = Sort.by("email","name");
 

@@ -6,9 +6,10 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-       <import resource="spring-tools.xml"/>
+<!--       <import resource="spring-tools.xml"/>-->
        <context:annotation-config/>
        <context:component-scan base-package="edu.tampa.**.repositories"/>
        <context:component-scan base-package="edu.tampa.**.services"/>
        <context:component-scan base-package="edu.tampa.**.web"/>
+
 </beans>

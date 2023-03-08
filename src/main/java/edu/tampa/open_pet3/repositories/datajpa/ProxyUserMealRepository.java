@@ -15,12 +15,16 @@ import java.util.List;
 public interface ProxyUserMealRepository extends JpaRepository<UserMeal,Integer> {
     @Transactional
     @Modifying
-    @Query("DELETE FROM UserMeal u WHERE u.id=:id")
-    int delete(@Param("id") int id);
+    @Query("DELETE FROM UserMeal u WHERE u.mealId=:id AND u.user.id=:userId")
+    int delete(@Param("id") int id,@Param("userId")int userId);
     @Query("FROM User u ORDER BY u.name")
     List<User> findAllMeals();
     @Query("SELECT m FROM UserMeal m WHERE m.id=:id AND m.user.id=:userId")
     UserMeal get(@Param("id")int id,@Param("userId")int userId);
     @Query("SELECT m FROM UserMeal m WHERE m.user.id=:userId")
     List<UserMeal>getAll(@Param("userId")int userId);
+    @Query("SELECT m FROM UserMeal m JOIN FETCH um.user WHERE m.id=?1 and m.user.id=?2 ORDER BY m.localDateTime " +
+            "DESC")
+    UserMeal getWithUser(Integer id,Integer userId);
+
 }

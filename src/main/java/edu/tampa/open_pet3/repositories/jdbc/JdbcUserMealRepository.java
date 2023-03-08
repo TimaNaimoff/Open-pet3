@@ -6,6 +6,7 @@ import edu.tampa.open_pet3.repositories.UserMealRepository;
 import edu.tampa.open_pet3.util.exception.NotFoundException;
 import edu.tampa.open_pet3.util.mappers.MealMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -15,12 +16,13 @@ import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 
+import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Future;
 
-@Repository
+@Repository("jdbcUserMealRepository")
 public class JdbcUserMealRepository implements UserMealRepository {
     private final JdbcTemplate jdbcTemplate;
 
