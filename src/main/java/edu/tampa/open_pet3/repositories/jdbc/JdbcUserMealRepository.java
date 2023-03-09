@@ -22,7 +22,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.Future;
 
-@Repository("jdbcUserMealRepository")
+//@Repository
 public class JdbcUserMealRepository implements UserMealRepository {
     private final JdbcTemplate jdbcTemplate;
 
@@ -34,7 +34,7 @@ public class JdbcUserMealRepository implements UserMealRepository {
     private static final String DELETE_MEALS="DELETE FROM meals WHERE id=? AND meal_id=?";
     private static final String GET_ALL="SELECT * FROM meals WHERE id=? ORDER BY local_date_time DESC";
     private static final String GET_MEAL="SELECT * FROM meals WHERE id = ? AND meal_id = ?";
-    @Autowired
+//    @Autowired
     public JdbcUserMealRepository(JdbcTemplate jdbcTemplate,NamedParameterJdbcTemplate parameterJdbcTemplate){
 //        this.insertUser=new SimpleJdbcInsert(jdbcTemplate).withTableName("meals")
 //                .usingGeneratedKeyColumns("mealId");

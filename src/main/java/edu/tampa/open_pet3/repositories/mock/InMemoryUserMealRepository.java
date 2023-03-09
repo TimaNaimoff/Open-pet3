@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 
-@Repository("inMemoryUserMealRepository")
+//@Repository
 public class InMemoryUserMealRepository implements UserMealRepository {
     private Map<Integer,Map<Integer,UserMeal>>repository=new ConcurrentHashMap<>();
     private AtomicInteger count=new AtomicInteger(0);

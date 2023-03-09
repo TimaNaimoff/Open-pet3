@@ -13,17 +13,17 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository("jdbcUserRepositoryImpl")
+//@Repository
 public class JdbcUserRepositoryImpl implements UserRepository {
     private static final BeanPropertyRowMapper<User>ROW_MAPPER=BeanPropertyRowMapper.newInstance(User.class);
-
+//    @Qualifier("userTemplate")
     private JdbcTemplate jdbcTemplate;
 
     private NamedParameterJdbcTemplate parameterJdbcTemplate;
 
     private SimpleJdbcInsert insertUser;
 
-    @Autowired
+//    @Autowired
     public JdbcUserRepositoryImpl(JdbcTemplate jdbcTemplate,NamedParameterJdbcTemplate parameterJdbcTemplate){
         this.insertUser=new SimpleJdbcInsert(jdbcTemplate).withTableName("users")
                 .usingGeneratedKeyColumns("id");

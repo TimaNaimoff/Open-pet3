@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 import static edu.tampa.open_pet3.repositories.mock.InMemoryUserMealRepository.USER_MEAL_COMPARATOR;
 
-//@Controller
+@Controller
 public class UserMealsRestController {
     private UserMealServiceImpl userMealService;
     private static final Logger LOG= LoggerFactory.getLogger(UserMealsRestController.class);

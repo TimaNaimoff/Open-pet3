@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Repository("inMemoryUserRepository")
+//@Repository("inMemoryUserRepository")
 public class InMemoryUserRepository implements UserRepository {
     private Map<Integer,User> repository=new ConcurrentHashMap<>();
     private AtomicInteger counter=new AtomicInteger();

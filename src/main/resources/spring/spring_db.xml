@@ -53,7 +53,7 @@
        </bean>
    </beans>
     <beans profile="jdbc">
-        <context:component-scan base-package="edu.tampa.open_pet3.repositories"/>
+        <context:component-scan base-package="edu.tampa.open_pet3.repositories.jdbc"/>
        <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
            <constructor-arg ref="dataSource"/>
        </bean>
@@ -75,7 +75,7 @@
 
 
     <beans profile="datajpa">
-    <context:component-scan base-package="edu.tampa.**.repositories.datajpa"/>
-    <jpa:repositories base-package="edu.tampa.**.repositories.datajpa"/>
+    <context:component-scan base-package="edu.tampa.**.repositories"/>
+    <jpa:repositories base-package="edu.tampa.**.repositories"/>
     </beans>
 </beans>

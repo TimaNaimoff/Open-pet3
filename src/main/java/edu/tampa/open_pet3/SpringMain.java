@@ -23,18 +23,18 @@ public class SpringMain {
              )
         {
             context.getEnvironment().setActiveProfiles(Profiles.POSTGRES, Profiles.DATAJPA);
-            context.load("classpath:spring/spring-app.xml");
+            context.load("classpath:spring/spring-app.xml","classpath:spring/spring_db.xml");
             context.refresh();
             System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
             UserAdminRestController adminius=context.getBean(UserAdminRestController.class);
             System.out.println(adminius.getAdminus(1,"userName","email","password", Role.ROLE_ADMIN));
             System.out.println();
             UserMealsRestController mealsRestController=context.getBean(UserMealsRestController.class);
-            List<UserMealWithExceed>filteredMealsWithExceeded=mealsRestController.getBetween(LocalDate.of(
-                    2015, Month.MAY,30), LocalTime.of(7,0),
-                    LocalDate.of(2015,Month.MAY,31),LocalTime.of(11,0));
-
-            filteredMealsWithExceeded.forEach(System.out::println);
+//            List<UserMealWithExceed>filteredMealsWithExceeded=mealsRestController.getBetween(LocalDate.of(
+//                    2015, Month.MAY,30), LocalTime.of(7,0),
+//                    LocalDate.of(2015,Month.MAY,31),LocalTime.of(11,0));
+//
+//            filteredMealsWithExceeded.forEach(System.out::println);
         }
     }
 }

@@ -10,7 +10,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.List;
 
-@Repository
+//@Repository
 public class MockUserRepository implements UserRepository {
     private static final Logger LOG= LoggerFactory.getLogger(MockUserRepository.class);
     @PostConstruct

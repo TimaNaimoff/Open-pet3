@@ -1,4 +1,4 @@
-package java.edu.tampa_open_pet3.repo.mock;
+package edu.tampa_open_pet3.repo.mock;
 
 import edu.tampa.open_pet3.model.User;
 import edu.tampa.open_pet3.repositories.UserRepository;
@@ -10,7 +10,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.List;
 
-@Repository
+//@Repository
 public class  MockUserRepository implements UserRepository {
     private static final Logger LOG= LoggerFactory.getLogger(MockUserRepository.class);
     @PostConstruct

@@ -23,8 +23,8 @@ public interface ProxyUserMealRepository extends JpaRepository<UserMeal,Integer>
     UserMeal get(@Param("id")int id,@Param("userId")int userId);
     @Query("SELECT m FROM UserMeal m WHERE m.user.id=:userId")
     List<UserMeal>getAll(@Param("userId")int userId);
-    @Query("SELECT m FROM UserMeal m JOIN FETCH um.user WHERE m.id=?1 and m.user.id=?2 ORDER BY m.localDateTime " +
-            "DESC")
-    UserMeal getWithUser(Integer id,Integer userId);
+//    @Query("SELECT m FROM UserMeal m JOIN FETCH um.user WHERE m.id=?1 and m.user.id=?2 ORDER BY m.localDateTime " +
+//            "DESC")
+//    UserMeal getWithUser(Integer id,Integer userId);
 
 }
